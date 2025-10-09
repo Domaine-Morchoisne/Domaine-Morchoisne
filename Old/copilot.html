@@ -1,0 +1,485 @@
+<!DOCTYPE html>    
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domaine MORCHOISNE - Nos Vins</title>
+
+  <style>
+    /* ===== Base & thème ===== */
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background-color: #F7F0E6;
+      color: #3A2F1F;
+      min-height: 100svh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    /* ===== Header ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #F7F0E6;
+      border-bottom: 1px solid #DAD2C8;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    
+    header a.logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-decoration: none;
+      color: #3A2F1F;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 1em;
+      color: #3A2F1F;
+      transition: color 0.3s;
+    }
+    
+    nav a:hover, nav a.active {
+      color: #7A9E7E;
+    }
+
+    /* ===== Section principale ===== */
+    .wines-section {
+      padding: 50px 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .wines-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .wines-header h1 {
+      font-size: 2.5em;
+      color: #7A9E7E;
+      margin: 0 0 15px 0;
+    }
+
+    .wines-header p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #3A2F1F;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ===== Gamme de vins ===== */
+    .wine-range {
+      margin-bottom: 60px;
+    }
+
+    .range-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .range-title h2 {
+      font-size: 2em;
+      color: #7A9E7E;
+      margin: 0 0 10px 0;
+    }
+
+    .range-subtitle {
+      font-size: 1.1em;
+      color: #3A2F1F;
+      font-style: italic;
+    }
+
+    /* ===== Bouteille avec étiquette ===== */
+    .bottle-showcase {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0;
+      gap: 60px;
+    }
+
+    .bottle-container {
+      position: relative;
+      text-align: center;
+    }
+
+    .bottle-image img {
+      width: clamp(140px, 22vw, 320px);
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-inline: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+      transition: transform 0.3s ease;
+    }
+
+    .bottle-image img:hover {
+      transform: scale(1.05);
+    }
+
+    .bottle-text {
+      max-width: 520px;           /* largeur confortable pour la lecture */
+    }
+    
+/* Styles du texte (reprend ceux que tu avais en inline pour homogénéiser) */
+    .bottle-text h3 {
+      color: #7A9E7E;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+    .bottle-text p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #3A2F1F;
+    }
+    .bottle-text .notes {
+      color: #5A5A5A;
+      font-style: italic;
+    }
+
+    /* ===== Millésimes disponibles ===== */
+    .vintages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .vintage-card {
+      background: white;
+      border: 1px solid #DAD2C8;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 2px 8px rgba(58,47,31,0.06);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .vintage-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(58,47,31,0.1);
+    }
+
+    .vintage-year {
+      font-size: 1.8em;
+      color: #7A9E7E;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .vintage-details {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .vintage-details p {
+      margin: 8px 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted #DAD2C8;
+      padding-bottom: 5px;
+    }
+
+    .vintage-details strong {
+      color: #3A2F1F;
+    }
+
+    .vintage-notes {
+      font-style: italic;
+      color: #5A5A5A;
+      font-size: 0.95em;
+      line-height: 1.4;
+      margin-top: 15px;
+      text-align: left;
+    }
+
+    .availability {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .available {
+      background-color: #E8F5E8;
+      color: #2E7D2E;
+    }
+
+    .limited {
+      background-color: #FFF3CD;
+      color: #856404;
+    }
+
+    .sold-out {
+      background-color: #F8D7DA;
+      color: #721C24;
+    }
+
+    /* ===== CTA Contact ===== */
+    .contact-cta {
+      text-align: center;
+      margin-top: 60px;
+      padding: 40px;
+      background: white;
+      border: 1px solid #DAD2C8;
+      border-radius: 8px;
+    }
+
+    .contact-cta h3 {
+      color: #7A9E7E;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    .contact-cta p {
+      margin-bottom: 25px;
+      color: #3A2F1F;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #7A9E7E;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #6B8A6F;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      font-size: 0.9em;
+      color: #3A2F1F;
+      padding: 20px 20px;
+      border-top: 1px solid #DAD2C8;
+      background-color: #F7F0E6;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-left a {
+      color: #7A9E7E;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-left a:hover {
+      color: #3A2F1F;
+    }
+    
+    .instagram-icon, .email-icon {
+      width: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    
+    .footer-right {
+      text-align: right;
+      line-height: 1.5;
+    }
+
+    .footer-right a {
+      color: #7A9E7E;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-right a:hover {
+      color: #3A2F1F;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      nav a {
+        margin: 0 10px;
+      }
+      
+      .wines-section {
+        padding: 30px 20px;
+      }
+      
+      .wines-header h1 {
+        font-size: 2em;
+      }
+      
+      .bottle-showcase {
+        flex-direction: column;
+        gap: 30px;
+      }
+      
+      .vintages-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .footer-right {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <a href="index.html" class="logo">Domaine MORCHOISNE</a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="nos-valeurs.html">Nos Valeurs</a>
+      <a href="nos-vins.html" class="active">Nos Vins</a>
+      <a href="nos-vignes.html">Nos Vignes</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== Section principale ===== -->
+  <main class="wines-section">
+    <!-- En-tête -->
+    <div class="wines-header">
+      <h1>Nos Vins</h1>
+      <p>Une gamme unique de vins blancs biologiques, expression pure de notre terroir et de notre savoir-faire familial. Chaque millésime raconte l'histoire d'une année, d'un climat, d'une passion.</p>
+    </div>
+
+      <!-- Bouteille showcase -->
+      <div class="bottle-showcase">
+        <div class="bottle-image">
+          <img
+            src="bouteille 2023.jpg"
+            alt="Illustration stylisée bouteille 2023">
+        </div>
+        <div class="bottle-text">
+          <h3>Floréal - Voltis</h3>
+          <p>
+            Des arômes floraux délicats avec des notes de fruits blancs et une belle fraîcheur en bouche. 
+            Un vin élégant qui accompagne parfaitement vos moments de convivialité.
+          </p>
+          <p class="notes">
+            Notre cuvée signature en agriculture biologique
+          </p>
+        </div>
+      </div>
+
+      <!-- Millésimes disponibles -->
+      <div class="vintages-grid">
+        <!-- Millésime 2025 -->
+        <div class="vintage-card">
+          <div class="vintage-year">2025</div>
+          <div class="vintage-details">
+            <p><strong>Degré:</strong> <span>% vol</span></p>
+            <p><strong>Production:</strong> <span>? bouteilles</span></p>
+            <p><strong>Récolte:</strong> <span>Septembre 2025</span></p>
+            <p><strong>Mise en bouteille:</strong> <span>Mai 2026</span></p>
+          </div>
+          <div class="vintage-notes">
+            Millésime exceptionnel ! Un été chaud suivi d'un automne doux ont permis une maturation optimale. 
+            Vin frais et équilibré avec une belle complexité aromatique.
+          </div>
+          <div class="availability sold-out">
+            ✗ A venir
+          </div>
+        </div>
+
+        <!-- Millésime 2024 -->
+        <div class="vintage-card">
+          <div class="vintage-year">2024</div>
+          <div class="vintage-details">
+            <p><strong>Degré:</strong> <span>12% vol</span></p>
+            <p><strong>Production:</strong> <span>1 000 bouteilles</span></p>
+            <p><strong>Récolte:</strong> <span>Octobre 2024</span></p>
+            <p><strong>Mise en bouteille:</strong> <span>Mai 2025</span></p>
+          </div>
+          <div class="vintage-notes">
+            Notre seconde récolte, marquée par un caractère plus minéral. 
+            Un vin qui gagne en complexité avec le temps, parfait pour la garde.
+          </div>
+          <div class="availability available">
+            ✓ Disponible
+          </div>
+        </div>
+
+        <!-- Millésime 2023 -->
+        <div class="vintage-card">
+          <div class="vintage-year">2023</div>
+          <div class="vintage-details">
+            <p><strong>Degré:</strong> <span>11,5% vol</span></p>
+            <p><strong>Production:</strong> <span>700 bouteilles</span></p>
+            <p><strong>Récolte:</strong> <span>Octobre 2023</span></p>
+            <p><strong>Mise en bouteille:</strong> <span>Mai 2024</span></p>
+          </div>
+          <div class="vintage-notes">
+            Notre première récolte ! Un millésime historique pour le domaine. 
+            Vin délicat aux arômes floraux prononcés, témoignage de nos débuts.
+          </div>
+          <div class="availability limited">
+            ⚠ Stock limité
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to action -->
+    <div class="contact-cta">
+      <h3>Intéressé par nos vins ?</h3>
+      <p>Contactez-nous pour organiser une dégustation ou commander nos millésimes disponibles. 
+      Nous serons ravis de vous faire découvrir notre passion !</p>
+      <a href="contact.html" class="cta-button">Nous contacter</a>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <a href="https://instagram.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="instagram-icon">
+        Instagram<br>
+        <br>
+        </a>
+        <a href="mailto:ferme.plmorchoisne@gmail.com">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="email" class="email-icon">
+        ferme.plmorchoisne@gmail.com
+        </a>
+      </div>
+      <div class="footer-right">
+         MORCHOISNE Pierre-Louis & Philippe<br>
+         17 rue du 19 mars 1962, Bonvilliers<br>
+         91150 MORIGNY-CHAMPIGNY<br>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

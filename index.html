@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domaine MORCHOISNE - Accueil</title>
+
+  <style>
+    /* ===== Styles globaux ===== */
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background-color: #F7F0E6;
+      color: #3A2F1F;
+    }
+
+    /* ===== En-tête (header) ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #F7F0E6;
+      border-bottom: 1px solid #DAD2C8;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header a.logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-decoration: none;
+      color: #3A2F1F;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 1em;
+      color: #3A2F1F;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: #7A9E7E;
+    }
+
+    /* ===== Section Hero ===== */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.8fr 1.2fr;
+      align-items: center;
+      column-gap: 40px;
+      padding: 50px 50px;
+    }
+
+    .hero-text {
+      text-align: left;
+    }
+
+    .hero-text h1 {
+      font-size: 3em;
+      line-height: 1.2;
+      margin: 0;
+      color: #7A9E7E;
+      padding-left: 1cm;
+    }
+
+    .hero-text p {
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #3A2F1F;
+      max-width: 1000px;
+      line-height: 1.6;
+      text-align: justify;
+      padding-left: 1cm;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      margin-left: 1cm;
+      padding: 15px 30px;
+      background-color: #7A9E7E;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #6B8A6F;
+    }
+
+    .hero-image {
+      text-align: right;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+      opacity: 0.4;
+      display: block;
+    }
+
+    /* ===== Pied de page (footer) ===== */
+    footer {
+      font-size: 0.9em;
+      color: #3A2F1F;
+      padding: 20px 20px;
+      border-top: 1px solid #DAD2C8;
+      background-color: #F7F0E6;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-left a {
+      color: #7A9E7E;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-left a:hover {
+      color: #3A2F1F;
+    }
+
+    .instagram-icon, .email-icon {
+      width: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    .footer-right {
+      text-align: right;
+      line-height: 1.5;
+    }
+
+    .footer-right a {
+      color: #7A9E7E;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-right a:hover {
+      color: #3A2F1F;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        padding: 30px 20px;
+      }
+      
+      .hero-text h1 {
+        font-size: 2.5em;
+        padding-left: 0;
+      }
+      
+      .hero-text p {
+        padding-left: 0;
+      }
+      
+      .cta-button {
+        margin-left: 0;
+      }
+      
+      header {
+        padding: 15px 20px;
+      }
+      
+      nav a {
+        margin-left: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <a href="index.html" class="logo">Domaine MORCHOISNE</a>
+    <nav>
+      <a href="index.html" class="active">Accueil</a>
+      <a href="nos-valeurs.html">Nos Valeurs</a>
+      <a href="nos-vins.html">Nos Vins</a>
+      <a href="nos-vignes.html">Nos Vignes</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== Hero section ===== -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Domaine Familial<br>
+          MORCHOISNE</h1>
+      <p>
+        Le pari fou d'un père et de son fils : redonner vie à un vignoble oublié.<br>
+        Une aventure familiale où chaque bouteille raconte une histoire de passion et de nature.
+      </p>
+      <a href="nos-vins.html" class="cta-button">Découvrir nos vins</a>
+    </div>
+
+    <div class="hero-image">
+      <img
+        src="20250922_1808_Dessins Contrastés Simples_remix_01k5s2s7vfebe9dewz07x2nn8t.jpg"
+        alt="Illustration stylisée du Domaine Morchoisne">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <a href="https://instagram.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="instagram-icon">
+        Instagram<br>
+        <br>
+        </a>
+        <a href="mailto:ferme.plmorchoisne@gmail.com">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="email" class="email-icon">
+        ferme.plmorchoisne@gmail.com
+        </a>
+      </div>
+      <div class="footer-right">
+         MORCHOISNE Pierre-Louis & Philippe<br>
+         17 rue du 19 mars 1962, Bonvilliers<br>
+         91150 MORIGNY-CHAMPIGNY<br>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

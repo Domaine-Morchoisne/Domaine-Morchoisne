@@ -1,0 +1,204 @@
+<!DOCTYPE html> <!-- Indique au navigateur le type de document (HTML5) -->
+<html lang="fr"> <!-- Définit la langue principale de la page pour l’accessibilité/SEO -->
+<head>
+  <meta charset="UTF-8"> <!-- Encodage en UTF‑8 : support des caractères accentués -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive : adapte l’échelle sur mobile -->
+  <title>Domaine MORCHOISNE</title> <!-- Titre affiché dans l’onglet du navigateur -->
+
+  <style>
+    /* ===== Styles globaux ===== */
+    body {
+      margin: 0; /* Supprime la marge par défaut du body */
+      font-family: "Georgia", serif; /* Police élégante avec empattements */
+      background-color: #F7F0E6; /* Beige clair, ambiance chaleureuse */
+      color: #3A2F1F; /* Marron profond pour le texte principal */
+    }
+
+    /* ===== En-tête (header) ===== */
+    header {
+      display: flex; /* Mise en page en flexbox (ligne par défaut) */
+      justify-content: space-between; /* Espace maximal entre logo et navigation */
+      align-items: center; /* Aligne verticalement au centre */
+      padding: 20px 50px; /* Espacement interne : haut/bas 20px, gauche/droite 50px */
+      background-color: #F7F0E6; /* Même fond que la page pour continuité visuelle */
+      border-bottom: 1px solid #DAD2C8; /* Légère ligne séparatrice */
+      position: sticky; /* Le header reste collé en haut au scroll */
+      top: 0; /* Position collée au bord supérieur */
+      /* Astuce : si contenu passe par-dessus, ajouter z-index: 10; */
+    }
+
+    header a.logo {
+      font-size: 1.5em; /* Logo texte plus grand */
+      font-weight: bold; /* En gras pour l’importance */
+      text-decoration: none; /* Retire le soulignement */
+      color: #3A2F1F; /* Couleur cohérente avec le thème */
+    }
+
+    nav a {
+      margin-left: 25px; /* Espacement entre les liens */
+      text-decoration: none; /* Retire le soulignement */
+      font-size: 1em; /* Taille standard */
+      color: #3A2F1F; /* Couleur des liens au repos */
+      transition: color 0.3s; /* Animation douce au survol */
+    }
+
+    nav a:hover {
+      color: #7A9E7E; /* Vert sauge au survol */
+    }
+
+    /* ===== Section Hero ===== */
+    .hero {
+      display: grid; /* On passe en grille */
+      grid-template-columns: 1.8fr 1.2fr; /* 2 parts pour le texte, 1 pour l'image */
+      align-items: center; /* Centre verticalement */
+      column-gap: 40px; /* Espace entre les colonnes */
+      padding: 50px 50px;
+      /* Optionnel responsive : flex-wrap: wrap; pour passer en pile sur mobile */
+    }
+
+    .hero-text {
+      flex: 1; /* Prend une part égale de l’espace horizontal */
+      text-align: left; /* Centre les éléments texte (h1, p) dans leur conteneur */
+      padding-right: 0px; /* Pas d’espace à droite ici (tu peux ajuster si besoin) */
+    }
+
+    .hero-text h1 {
+      font-size: 3em; /* Titre très visible */
+      line-height: 1.2; /* Hauteur de ligne compacte mais lisible */
+      margin: 0; /* Supprime la marge par défaut du h1 */
+      color: #7A9E7E; /* Vert sauge pour le titre */
+      padding-left: 1cm; /* Décale tout le texte de 1 cm vers la droite */
+    }
+
+    .hero-text p {
+      margin-top: 20px; /* Espace au-dessus du paragraphe */
+      font-size: 1.1em; /* Texte un peu plus grand pour confort de lecture */
+      color: #3A2F1F; /* Couleur du texte */
+      max-width: 1000px; /* Limite la largeur pour de belles lignes */
+      line-height: 1.6; /* Interligne aéré */
+      text-align: justify; /* Texte justifié sur les deux bords */
+      padding-left: 1cm; /* Décale tout le texte de 1 cm vers la droite */
+      /* Astuce : pour éviter les rivières, tu peux ajouter text-justify: inter-word; (support variable) */
+      /* Pour une césure plus propre : hyphens: auto; et lang="fr" sur <html> (déjà fait) */
+    }
+
+    .hero-image {
+      flex: 1; /* Occupe l’autre moitié de l’espace */
+      text-align: right; /* Aligne l’image à droite du conteneur */
+    }
+    .hero-image img {
+      max-width: 100%; /* L’image ne dépasse pas 70% de la colonne */
+      height: auto;
+      opacity: 0.4; /* Transparence légère pour ne pas voler la vedette au texte */
+      display: block;
+      /* Astuce : ajoute height: auto; si tu forces une hauteur ailleurs */
+    }
+
+    /* ===== Pied de page (footer) ===== */
+    footer {
+      font-size: 0.9em; /* Légèrement plus petit que le texte principal */
+      color: #3A2F1F; /* Couleur du texte */
+      padding: 20px 20px; /* Espacement interne confortable */
+      border-top: 1px solid #DAD2C8; /* Séparation visuelle avec le contenu */
+      background-color: #F7F0E6; /* Fond assorti au thème */
+    }
+
+    .footer-content {
+      display: flex; /* Deux colonnes côte à côte */
+      justify-content: space-between; /* Espace entre la gauche et la droite */
+      align-items: center; /* Aligne verticalement */
+      gap: 20px; /* Espace de respiration entre colonnes */
+      flex-wrap: wrap; /* S’empile si l’espace est trop petit (mobile) */
+      max-width: 1200px; /* Largeur max confortable (optionnel) */
+      margin: 0 auto; /* Centre le contenu dans le footer */
+    }
+
+    .footer-left a {
+      color: #7A9E7E; /* Liens en vert sauge */
+      text-decoration: none; /* Pas de soulignement */
+      transition: color 0.3s; /* Transition douce au survol */
+    }
+    .footer-left a:hover {
+      color: #3A2F1F; /* Reprend la couleur principale au survol */
+    }
+    .instagram-icon {
+      width: 20px; /* Taille de l’icône Instagram */
+      vertical-align: middle; /* Aligne l’icône avec le texte */
+      margin-right: 5px; /* Petit espace avant le texte "Instagram" */
+    }
+    .email-icon {
+      width: 20px; /* Taille de l’icône email */
+      vertical-align: middle; /* Aligne l’icône avec le texte */
+      margin-right: 5px; /* Petit espace avant le texte "email" */
+    }
+    .footer-right {
+      text-align: right; /* Aligne le bloc d'adresse à droite */
+      line-height: 1.5; /* Lisibilité */
+    }
+    .footer-right a {
+      color: #7A9E7E; /* Lien email en vert sauge */
+      text-decoration: none; /* Pas de soulignement */
+      transition: color 0.3s; /* Transition douce au survol */
+    }
+    .footer-right a:hover {
+      color: #3A2F1F; /* Couleur principale au survol */
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header> <!-- Barre supérieure avec logo et navigation -->
+    <a href="#" class="logo">Domaine MORCHOISNE</a> <!-- Logo cliquable (retour à l’accueil) -->
+    <nav> <!-- Menu de navigation -->
+      <a href="#">Accueil</a> <!-- Lien vers la page d’accueil -->
+      <a href="#">Nos Valeurs</a> <!-- Présentation des engagements -->
+      <a href="#">Nos Vins</a> <!-- Liste/fiche des vins -->
+      <a href="#">Nos Vignes</a> <!-- Informations sur le vignoble -->
+      <a href="#">Galerie</a> <!-- Photos/illustrations du domaine -->
+      <a href="#">Contact</a> <!-- Moyens de contact -->
+    </nav>
+  </header>
+
+  <!-- ===== Hero section ===== -->
+  <section class="hero"> <!-- Section de mise en avant (accroche + image) -->
+    <div class="hero-text"> <!-- Colonne gauche : titre + texte -->
+      <h1>Domaine Familial<br>
+          MORCHOISNE</h1> <!-- Titre principal (accroche) -->
+      <p> <!-- Paragraphe de description justifié -->
+        Le pari fou d’un père et de son fils : redonner vie à un vignoble oublié.<br>
+        Une aventure familiale où chaque bouteille raconte une histoire de passion et de nature.
+      </p>
+    </div>
+
+    <div class="hero-image"> <!-- Colonne droite : image illustrative -->
+      <img
+        src="20250922_1808_Dessins Contrastés Simples_remix_01k5s2s7vfebe9dewz07x2nn8t.jpg"
+        alt="Illustration stylisée du Domaine Morchoisne" <!--ed de page avec réseaux et coordonnées -->
+     </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content"> <!-- Conteneur des 2 colonnes -->
+      <div class="footer-left">
+        <a href="https://instagram.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="instagram-icon">
+        Instagram<br>
+        <br>
+        </a>
+        <a href="mailto:ferme.plmorchoisne@gmail.com">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="email" class="email-icon">
+        ferme.plmorchoisne@gmail.com
+        </a>
+      </div>
+      <div class="footer-right"> <!-- Colonne droite : Coordonnées -->
+         MORCHOISNE Pierre-Louis & Philippe<br>
+         17 rue du 19 mars 1962, Bonvilliers<br>
+         91150 MORIGNY-CHAMPIGNY<br>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
