@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Accueil -->
+  <url>
+    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne/</loc>
+    <lastmod>2025-10-13T15:05:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Nos valeurs -->
+  <url>
+    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne/nos-valeurs.html</loc>
+    <lastmod>2025-10-13T15:05:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Nos vins -->
+  <url>
+    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne/nos-vins.html</loc>
+    <lastmod>2025-10-13T15:05:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Nos vignes -->
+  <url>
+    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne/nos-vignes.html</loc>
+    <lastmod>2025-10-13T15:05:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Galerie -->
+  <url>
+    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne/galerie.html</loc>
+    <lastmod>2025-10-13T15:05:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne/contact.html</loc>
+    <lastmod>2025-10-13T15:05:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>
