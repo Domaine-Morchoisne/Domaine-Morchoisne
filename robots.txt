@@ -1,0 +1,55 @@
+# robots.txt pour Domaine MORCHOISNE
+# Ce fichier indique aux moteurs de recherche ce qu'ils peuvent explorer
+
+# Autoriser tous les robots sur tout le site
+User-agent: *
+Allow: /
+
+# IMPORTANT : Bloquer l'accès aux fichiers sensibles
+Disallow: /config.js
+Disallow: /config.local.js
+Disallow: /.env
+Disallow: /private/
+Disallow: /backup/
+
+# Bloquer les fichiers temporaires et de développement
+Disallow: /*.tmp$
+Disallow: /*.log$
+Disallow: /node_modules/
+
+# Autoriser explicitement les pages principales
+Allow: /index.html
+Allow: /nos-valeurs.html
+Allow: /nos-vins.html
+Allow: /nos-vignes.html
+Allow: /galerie.html
+Allow: /contact.html
+
+# Autoriser les images et ressources
+Allow: /images/
+Allow: /*.jpg
+Allow: /*.png
+Allow: /*.svg
+Allow: /*.webp
+
+# Indiquer où se trouve le sitemap
+Sitemap: https://domaine-morchoisne.github.io/Domaine-Morchoisne-Private/sitemap.xml
+
+# Règles spécifiques pour différents moteurs de recherche
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Bloquer les mauvais bots (scraping, spam)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

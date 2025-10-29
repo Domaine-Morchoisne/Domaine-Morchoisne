@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Titre et SEO -->
+  <title>Domaine MORCHOISNE - Nos Vignes</title>
+  <meta name="description" content="Découvrez les vignes du Domaine Morchoisne : un vignoble familial en Essonne cultivé en bio, avec les cépages Floréal et Voltis résistants aux maladies.">
+  <meta name="keywords" content="Domaine Morchoisne,vin bio Essonne,domaine viticole Île-de-France,vin bio,Voltis,Floréal,vin biologique,Morigny-Champigny,vigneron bio,vin blanc bio,viticulture durable,père et fils,Bonvilliers,Essonne">
+  <meta name="author" content="Pierre-Louis Morchoisne">
+
+  <!-- Localisation -->
+  <meta name="geo.region" content="FR-91">
+  <meta name="geo.placename" content="Morigny-Champigny">
+  
+  <!-- Open Graph (réseaux sociaux) -->
+  <meta property="og:title" content="Domaine MORCHOISNE - Nos Vignes">
+  <meta property="og:description" content="Découvrez les vignes du Domaine Morchoisne : un vignoble familial en Essonne cultivé en bio, avec les cépages Floréal et Voltis résistants aux maladies.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#7A9E7E">
+  <meta name="msapplication-TileColor" content="#7A9E7E">
+  <meta name="theme-color" content="#7A9E7E">
+  
+  <!-- Canonical et indexation -->
+  <link rel="canonical" href="">
+  <meta name="robots" content="index, follow">
+  
+  <style>
+    /* ===== Variables CSS ===== */
+    :root {
+      --color-bg: #F7F0E6;
+      --color-text: #3A2F1F;
+      --color-primary: #7A9E7E;
+      --color-primary-hover: #6B8A6F;
+      --color-border: #DAD2C8;
+      --color-white: #FFFFFF;
+      --color-gray: #5A5A5A;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* ===== Styles globaux ===== */
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    /* ===== Header ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    header a.logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-decoration: none;
+      color: var(--color-text);
+      transition: color 0.3s;
+    }
+
+    header a.logo:hover {
+      color: var(--color-primary);
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 1em;
+      color: var(--color-text);
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--color-primary);
+    }
+
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: var(--color-primary);
+    }
+
+    /* ===== Menu mobile ===== */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--color-text);
+      transition: all 0.3s;
+    }
+
+    /* ===== Section principale ===== */
+    .vineyard-section {
+      padding: 50px 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* En-tête */
+    .vineyard-header {
+      text-align: center;
+      margin-bottom: 50px;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .vineyard-header h1 {
+      font-size: 2.5em;
+      color: var(--color-primary);
+      margin: 0 0 15px 0;
+    }
+
+    .separator {
+      width: 80px;
+      height: 4px;
+      background-color: var(--color-primary);
+      margin: 20px auto 25px auto;
+      border-radius: 2px;
+    }
+
+    .vineyard-header p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: var(--color-text);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Section terroir */
+    .terroir-section {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 40px;
+      margin-bottom: 60px;
+      box-shadow: 0 2px 8px rgba(58,47,31,0.06);
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    }
+
+    .terroir-section h2 {
+      color: var(--color-primary);
+      font-size: 1.8em;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .terroir-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .terroir-text p {
+      line-height: 1.8;
+      font-size: 1.05em;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .terroir-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px;
+      background: var(--color-bg);
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .stat-item:hover {
+      transform: translateY(-3px);
+    }
+
+    .stat-number {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: var(--color-primary);
+      display: block;
+    }
+
+    .stat-label {
+      color: var(--color-text);
+      font-size: 0.95em;
+      margin-top: 5px;
+    }
+
+    /* Carte et photo drone */
+    .maps-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .map-item {
+      background: var(--color-bg);
+      border: 2px dashed var(--color-border);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .map-item h3 {
+      color: var(--color-primary);
+      margin-bottom: 15px;
+      font-size: 1.2em;
+    }
+
+    .map-placeholder {
+      width: 100%;
+      height: 250px;
+      background: linear-gradient(135deg, #A5C4A9, var(--color-primary));
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+    /* Section cépages */
+    .grape-varieties {
+      margin: 60px 0;
+    }
+
+    .grape-varieties h2 {
+      color: var(--color-primary);
+      font-size: 2em;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .grape-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(58,47,31,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.8s ease-out backwards;
+    }
+
+    .grape-card:nth-child(2) { animation-delay: 0.3s; }
+    .grape-card:nth-child(3) { animation-delay: 0.4s; }
+
+    .grape-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(58,47,31,0.12);
+    }
+
+    .grape-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 3px solid var(--color-primary);
+    }
+
+    .grape-title {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .grape-icon {
+      font-size: 2.5em;
+    }
+
+    .grape-title h3 {
+      font-size: 2em;
+      color: var(--color-primary);
+      margin: 0;
+    }
+
+    .grape-count {
+      text-align: right;
+    }
+
+    .grape-count .number {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: var(--color-primary);
+      display: block;
+      line-height: 1;
+    }
+
+    .grape-count .label {
+      font-size: 0.9em;
+      color: var(--color-gray);
+      margin-top: 5px;
+    }
+
+    .grape-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .grape-description {
+      line-height: 1.7;
+      font-size: 1.05em;
+    }
+
+    .grape-description p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .grape-characteristics {
+      background: var(--color-bg);
+      padding: 25px;
+      border-radius: 8px;
+    }
+
+    .grape-characteristics h4 {
+      color: var(--color-primary);
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 1.2em;
+    }
+
+    .characteristics-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .characteristics-list li {
+      padding: 8px 0;
+      border-bottom: 1px dotted var(--color-border);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .characteristics-list li:last-child {
+      border-bottom: none;
+    }
+
+    .char-label {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .char-value {
+      color: var(--color-gray);
+    }
+
+    /* Section pratiques */
+    .practices-section {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 8px rgba(58,47,31,0.06);
+      animation: fadeInUp 0.8s ease-out 0.5s backwards;
+    }
+
+    .practices-section h2 {
+      color: var(--color-primary);
+      font-size: 1.8em;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .practices-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .practice-item {
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .practice-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .practice-icon {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+
+    .practice-item h3 {
+      color: var(--color-text);
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+
+    .practice-item p {
+      color: var(--color-gray);
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+
+    /* Call to action */
+    .vineyard-cta {
+      text-align: center;
+      margin-top: 60px;
+      padding: 40px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      animation: fadeInUp 0.8s ease-out 0.6s backwards;
+    }
+
+    .vineyard-cta h3 {
+      color: var(--color-primary);
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    .vineyard-cta p {
+      margin-bottom: 25px;
+      color: var(--color-text);
+      font-size: 1.1em;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 35px;
+      background-color: var(--color-primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(122, 158, 126, 0.3);
+    }
+
+    .cta-button:hover {
+      background-color: var(--color-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(122, 158, 126, 0.4);
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      font-size: 0.95em;
+      color: var(--color-text);
+      padding: 30px 20px;
+      border-top: 1px solid var(--color-border);
+      background-color: var(--color-bg);
+      margin-top: 50px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-left,
+    .footer-right {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-left a,
+    .footer-right a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-left a:hover,
+    .footer-right a:hover {
+      color: var(--color-primary-hover);
+      text-decoration: underline;
+    }
+
+    .social-icon {
+      width: 22px;
+      height: 22px;
+      vertical-align: middle;
+    }
+
+    .footer-right {
+      text-align: right;
+      line-height: 1.8;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.85em;
+      color: #666;
+    }
+
+    .footer-bottom a {
+      color: var(--color-primary);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .terroir-grid,
+      .grape-content,
+      .maps-container {
+        grid-template-columns: 1fr;
+      }
+
+      .terroir-stats {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background-color: var(--color-bg);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: left 0.3s;
+        z-index: 99;
+      }
+
+      nav.active {
+        left: 0;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+      
+      .vineyard-section {
+        padding: 30px 20px;
+      }
+      
+      .vineyard-header h1 {
+        font-size: 2em;
+      }
+
+      .terroir-section,
+      .practices-section,
+      .grape-card,
+      .vineyard-cta {
+        padding: 25px 20px;
+      }
+
+      .terroir-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .grape-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .grape-count {
+        text-align: center;
+      }
+
+      .practices-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .footer-right {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stat-number {
+        font-size: 2em;
+      }
+
+      .grape-title h3 {
+        font-size: 1.5em;
+      }
+
+      .grape-count .number {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <a href="index.html" class="logo">Domaine MORCHOISNE</a>
+    
+    <!-- Menu hamburger (mobile) -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="nos-valeurs.html">Nos Valeurs</a>
+      <a href="nos-vins.html">Nos Vins</a>
+      <a href="nos-vignes.html" class="active">Nos Vignes</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== Section principale ===== -->
+  <main class="vineyard-section">
+    <!-- En-tête -->
+    <div class="vineyard-header">
+      <h1>Nos Vignes</h1>
+      <div class="separator"></div>
+      <p>Un vignoble familial de 8 000 pieds implanté sur les terres d'Île-de-France, cultivé en agriculture biologique avec des cépages résistants parfaitement adaptés à notre terroir.</p>
+    </div>
+
+    <!-- Section terroir -->
+    <section class="terroir-section">
+      <h2>Notre Terroir</h2>
+      <div class="terroir-grid">
+        <div class="terroir-text">
+          <p>
+            Notre vignoble est situé à Bonvilliers, en plein cœur de l'Essonne, sur des sols argilo-calcaires typiques de la région. Cette composition offre un excellent drainage naturel et une bonne rétention d'eau, permettant à nos vignes de s'épanouir même lors des étés les plus secs.
+          </p>
+          <p>
+            L'exposition sud-est de nos parcelles garantit un ensoleillement optimal tout au long de la journée, favorisant la maturation progressive et harmonieuse des raisins. Le microclimat local, tempéré par la proximité de vallées verdoyantes, crée des conditions idéales pour la viticulture.
+          </p>
+          <div class="terroir-stats">
+            <div class="stat-item">
+              <span class="stat-number">8000</span>
+              <span class="stat-label">pieds de vigne</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2</span>
+              <span class="stat-label">cépages</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Bio</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">SE</span>
+              <span class="stat-label">Exposition</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="maps-container">
+          <div class="map-item">
+            <h3>Carte de la parcelle</h3>
+            <div class="map-placeholder">
+              📍<br>
+              Insérez votre carte<br>
+              de parcelle ici
+            </div>
+          </div>
+          <div class="map-item">
+            <h3>Vue drone</h3>
+            <div class="map-placeholder">
+              🚁<br>
+              Insérez votre photo<br>
+              drone ici
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section cépages -->
+    <section class="grape-varieties">
+      <h2>Nos Cépages Résistants</h2>
+
+      <!-- Floréal -->
+      <div class="grape-card">
+        <div class="grape-header">
+          <div class="grape-title">
+            <span class="grape-icon">🍇</span>
+            <h3>Floréal</h3>
+          </div>
+          <div class="grape-count">
+            <span class="number">6000</span>
+            <span class="label">pieds plantés</span>
+          </div>
+        </div>
+        <div class="grape-content">
+          <div class="grape-description">
+            <p>
+              Le Floréal est un cépage blanc hybride résistant créé par l'INRAE. Issu d'un croisement complexe, il combine résistance aux maladies et qualité aromatique exceptionnelle. Ce cépage précoce s'adapte parfaitement à notre climat d'Île-de-France.
+            </p>
+            <p>
+              Ses arômes subtils de fleurs blanches, d'agrumes et de fruits exotiques en font un cépage de choix pour produire des vins blancs élégants et rafraîchissants. Sa résistance naturelle au mildiou et à l'oïdium nous permet de réduire drastiquement les traitements.
+            </p>
+          </div>
+          <div class="grape-characteristics">
+            <h4>Caractéristiques</h4>
+            <ul class="characteristics-list">
+              <li>
+                <span class="char-label">Couleur</span>
+                <span class="char-value">Blanc</span>
+              </li>
+              <li>
+                <span class="char-label">Précocité</span>
+                <span class="char-value">Précoce</span>
+              </li>
+              <li>
+                <span class="char-label">Résistance</span>
+                <span class="char-value">Mildiou & Oïdium</span>
+              </li>
+              <li>
+                <span class="char-label">Arômes</span>
+                <span class="char-value">Fleurs, Agrumes</span>
+              </li>
+              <li>
+                <span class="char-label">Acidité</span>
+                <span class="char-value">Élevée</span>
+              </li>
+              <li>
+                <span class="char-label">Potentiel alcool</span>
+                <span class="char-value">12-13%</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Voltis -->
+      <div class="grape-card">
+        <div class="grape-header">
+          <div class="grape-title">
+            <span class="grape-icon">🍇</span>
+            <h3>Voltis</h3>
+          </div>
+          <div class="grape-count">
+            <span class="number">2000</span>
+            <span class="label">pieds plantés</span>
+          </div>
+        </div>
+        <div class="grape-content">
+          <div class="grape-description">
+            <p>
+              Le Voltis est également un cépage blanc hybride résistant développé par l'INRAE. Particulièrement robuste, il affiche une résistance remarquable aux principales maladies cryptogamiques de la vigne, ce qui correspond parfaitement à notre philosophie de viticulture biologique.
+            </p>
+            <p>
+              Il produit des vins aromatiques aux notes florales et fruitées, avec une belle fraîcheur et une structure équilibrée. Son rendement régulier et sa polyvalence en font un cépage fiable et apprécié pour élaborer des vins blancs de caractère.
+            </p>
+          </div>
+          <div class="grape-characteristics">
+            <h4>Caractéristiques</h4>
+            <ul class="characteristics-list">
+              <li>
+                <span class="char-label">Couleur</span>
+                <span class="char-value">Blanc</span>
+              </li>
+              <li>
+                <span class="char-label">Précocité</span>
+                <span class="char-value">Moyenne</span>
+              </li>
+              <li>
+                <span class="char-label">Résistance</span>
+                <span class="char-value">Très élevée</span>
+              </li>
+              <li>
+                <span class="char-label">Arômes</span>
+                <span class="char-value">Fruits blancs, Floral</span>
+              </li>
+              <li>
+                <span class="char-label">Acidité</span>
+                <span class="char-value">Moyenne</span>
+              </li>
+              <li>
+                <span class="char-label">Potentiel alcool</span>
+                <span class="char-value">11-12,5%</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section pratiques viticoles -->
+    <section class="practices-section">
+      <h2>Nos Pratiques Viticoles</h2>
+      <div class="practices-grid">
+        <div class="practice-item">
+          <div class="practice-icon">🌱</div>
+          <h3>Agriculture Biologique</h3>
+          <p>Certifiée depuis 2021, aucun produit chimique de synthèse</p>
+        </div>
+        <div class="practice-item">
+          <div class="practice-icon">✂️</div>
+          <h3>Taille Manuelle</h3>
+          <p>Taille raisonnée en hiver pour équilibrer vigueur et production</p>
+        </div>
+        <div class="practice-item">
+          <div class="practice-icon">🌿</div>
+          <h3>Enherbement Naturel</h3>
+          <p>Couverture végétale pour enrichir et protéger les sols</p>
+        </div>
+        <div class="practice-item">
+          <div class="practice-icon">🐝</div>
+          <h3>Biodiversité</h3>
+          <p>Haies, nichoirs et zones refuges pour la faune auxiliaire</p>
+        </div>
+        <div class="practice-item">
+          <div class="practice-icon">💧</div>
+          <h3>Gestion de l'Eau</h3>
+          <p>Travail du sol pour optimiser la rétention hydrique naturelle</p>
+        </div>
+        <div class="practice-item">
+          <div class="practice-icon">🍂</div>
+          <h3>Effeuillage Raisonné</h3>
+          <p>Aération des grappes pour favoriser une maturation optimale</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <div class="vineyard-cta">
+      <h3>Venez découvrir nos vignes</h3>
+      <p>Rien ne vaut une visite sur place pour comprendre notre travail quotidien et notre attachement à ce terroir unique.</p>
+      <a href="contact.html" class="cta-button">Organiser une visite</a>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <!-- Instagram -->
+        <a href="#" id="instagram-link" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="social-icon">
+          <span>Suivez-nous sur Instagram</span>
+        </a>
+        <br><br>
+        
+        <!-- Email (protection anti-spam) -->
+        <a href="#" id="email-link" title="Nous contacter par email">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" class="social-icon">
+          <span class="email-protected" id="email-display">Nous contacter</span>
+        </a>
+      </div>
+
+      <div class="footer-right" id="footer-address">
+        <!-- Adresse chargée dynamiquement depuis config.js -->
+        <span style="color: #999;">Chargement...</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; <span id="current-year"></span> Domaine MORCHOISNE - Tous droits réservés<br>
+        <a href="mentions-legales.html">Mentions Légales</a> | 
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== Chargement de la configuration ===== -->
+  <script src="config.js"></script>
+  
+  <!-- ===== Scripts ===== -->
+  <script>
+    // ==========================================
+    // FONCTION : Menu mobile
+    // ==========================================
+    function toggleMenu() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('active');
+    }
+
+    // ==========================================
+    // FONCTION : Année courante
+    // ==========================================
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // ==========================================
+    // FONCTION : Charger les données depuis config.js
+    // ==========================================
+    document.addEventListener('DOMContentLoaded', function() {
+      // Vérifier si CONFIG est chargé
+      if (typeof CONFIG === 'undefined') {
+        console.error('❌ Le fichier config.js n\'a pas pu être chargé !');
+        return;
+      }
+
+      console.log('✅ Configuration chargée avec succès');
+
+      // ==========================================
+      // Charger l'email (avec protection anti-spam)
+      // ==========================================
+      const emailLink = document.getElementById('email-link');
+      const emailDisplay = document.getElementById('email-display');
+      
+      if (emailLink && CONFIG.contact && CONFIG.contact.email) {
+        // Créer le lien mailto
+        emailLink.href = 'mailto:' + CONFIG.contact.email;
+        
+        // Afficher une version obfusquée
+        if (CONFIG.contact.emailDisplay) {
+          emailDisplay.textContent = CONFIG.contact.emailDisplay;
+        } else {
+          const [user, domain] = CONFIG.contact.email.split('@');
+          emailDisplay.textContent = user + ' [at] ' + domain;
+        }
+
+        // Au clic, révéler le vrai email
+        emailLink.addEventListener('click', function(e) {
+          if (emailDisplay.textContent.includes('[at]')) {
+            e.preventDefault();
+            if (confirm('Voulez-vous ouvrir votre client email ?')) {
+              window.location.href = this.href;
+            }
+          }
+        });
+      }
+
+      // ==========================================
+      // Charger le lien Instagram
+      // ==========================================
+      const instagramLink = document.getElementById('instagram-link');
+      if (instagramLink && CONFIG.contact && CONFIG.contact.instagram) {
+        instagramLink.href = CONFIG.contact.instagram;
+      }
+
+      // ==========================================
+      // Charger l'adresse
+      // ==========================================
+      const footerAddress = document.getElementById('footer-address');
+      if (footerAddress && CONFIG.address && CONFIG.owners) {
+        footerAddress.innerHTML = `
+          <strong>${CONFIG.owners.displayName || 'Domaine MORCHOISNE'}</strong><br>
+          ${CONFIG.address.street || ''}<br>
+          ${CONFIG.address.postalCode || ''} ${CONFIG.address.city || ''}<br>
+          ${CONFIG.address.country === 'FR' ? 'France' : CONFIG.address.country || ''}
+        `;
+      }
+
+      // ==========================================
+      // Mettre à jour les métadonnées Open Graph dynamiquement
+      // ==========================================
+      if (CONFIG.seo) {
+        // Canonical URL
+        const canonicalLink = document.querySelector('link[rel="canonical"]');
+        if (canonicalLink && CONFIG.seo.siteUrl) {
+          canonicalLink.href = CONFIG.seo.siteUrl + 'nos-vignes.html';
+        }
+
+        // Open Graph URL
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl && CONFIG.seo.siteUrl) {
+          ogUrl.content = CONFIG.seo.siteUrl + 'nos-vignes.html';
+        }
+
+        // Open Graph Image
+        const ogImage = document.querySelector('meta[property="og:image"]');
+        if (ogImage && CONFIG.seo.defaultImage) {
+          ogImage.content = CONFIG.seo.defaultImage;
+        }
+
+        // Coordonnées GPS (meta tags)
+        if (CONFIG.address && CONFIG.address.coordinates) {
+          const geoPosition = document.querySelector('meta[name="geo.position"]');
+          const icbm = document.querySelector('meta[name="ICBM"]');
+          const coords = `${CONFIG.address.coordinates.lat}, ${CONFIG.address.coordinates.lng}`;
+          
+          if (geoPosition) geoPosition.content = coords;
+          if (icbm) icbm.content = coords;
+        }
+      }
+    });
+
+    // ==========================================
+    // Fermer le menu mobile en cliquant en dehors
+    // ==========================================
+    document.addEventListener('click', function(event) {
+      const nav = document.getElementById('main-nav');
+      const menuToggle = document.querySelector('.menu-toggle');
+      
+      if (nav.classList.contains('active') && 
+          !nav.contains(event.target) && 
+          !menuToggle.contains(event.target)) {
+        nav.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

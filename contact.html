@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <!-- Titre et SEO -->
+  <title>Domaine MORCHOISNE - Contact</title>
+  <meta name="description" content="Contactez le Domaine MORCHOISNE pour toute question, visite ou commande. Retrouvez nos coordonnées, horaires et formulaire de contact pour échanger avec nous.">
+  <meta name="keywords" content="Domaine Morchoisne,vin bio Essonne,domaine viticole Île-de-France, vin bio, Voltis, Floréal,vin biologique, Morigny-Champigny, vigneron bio, vin blanc bio, viticulture durable, père et fils, Bonvilliers, Essonne">
+  <meta name="author" content="Pierre-Louis Morchoisne">
+
+  <!-- Localisation -->
+  <meta name="geo.region" content="FR-91">
+  <meta name="geo.placename" content="Morigny-Champigny">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Domaine MORCHOISNE - Contact">
+  <meta property="og:description" content="Contactez le Domaine MORCHOISNE pour toute question, visite ou commande.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#7A9E7E">
+  <meta name="msapplication-TileColor" content="#7A9E7E">
+  <meta name="theme-color" content="#7A9E7E">
+  
+  <!-- Canonical et indexation -->
+  <link rel="canonical" href="">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="f3067d3499508ab0">
+  
+  <style>
+    /* ===== Variables CSS ===== */
+    :root {
+      --color-bg: #F7F0E6;
+      --color-text: #3A2F1F;
+      --color-primary: #7A9E7E;
+      --color-primary-hover: #6B8A6F;
+      --color-border: #DAD2C8;
+      --color-white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      min-height: 100svh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      line-height: 1.6;
+    }
+
+    /* ===== Header ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    header a.logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-decoration: none;
+      color: var(--color-text);
+      transition: color 0.3s;
+    }
+
+    header a.logo:hover {
+      color: var(--color-primary);
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 1em;
+      color: var(--color-text);
+      transition: color 0.3s;
+      position: relative;
+    }
+    
+    nav a:hover,
+    nav a.active {
+      color: var(--color-primary);
+    }
+
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: var(--color-primary);
+    }
+
+    /* ===== Menu mobile ===== */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--color-text);
+      transition: all 0.3s;
+    }
+
+    /* ===== Contenu Contact ===== */
+    .contact {
+      padding: 50px 5%;
+      background-color: var(--color-bg);
+    }
+    
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Colonne gauche : infos */
+    .contact-info {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .contact-info h1 {
+      margin: 0 0 10px 0;
+      color: var(--color-primary);
+      font-size: 2.2em;
+    }
+    
+    .contact-info p, .contact-info address {
+      line-height: 1.6;
+      margin: 8px 0;
+    }
+    
+    .contact-info a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.3s;
+      display: inline-flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+    
+    .contact-info a:hover {
+      color: var(--color-primary-hover);
+      text-decoration: underline;
+    }
+
+    .social-icon {
+      width: 22px;
+      height: 22px;
+      margin-right: 8px;
+    }
+
+    /* Carte Google */
+    .map-block {
+      margin: 30px 0 0;
+      max-width: 100%;
+    }
+    
+    .map-embed {
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(58,47,31,0.06);
+      position: relative;
+      width: 100%;
+      height: 250px;
+    }
+    
+    .map-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    
+    .map-actions {
+      text-align: right;
+      margin-top: 8px;
+    }
+    
+    .map-actions a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 0.9em;
+    }
+    
+    .map-actions a:hover {
+      color: var(--color-primary-hover);
+      text-decoration: underline;
+    }
+
+    /* Horaires d'ouverture */
+    .opening-hours {
+      margin-top: 30px;
+      padding: 20px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(58,47,31,0.06);
+    }
+    
+    .opening-hours h3 {
+      margin: 0 0 15px 0;
+      color: var(--color-primary);
+      font-size: 1.3em;
+    }
+    
+    .opening-hours p {
+      margin: 5px 0;
+      font-size: 0.95em;
+    }
+
+    /* Colonne droite : formulaire */
+    .contact-form {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(58,47,31,0.06);
+      height: fit-content;
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    }
+    
+    .contact-form h2 {
+      margin: 0 0 20px 0;
+      color: var(--color-primary);
+      font-size: 1.5em;
+    }
+    
+    .contact-form .field {
+      margin-bottom: 16px;
+    }
+    
+    .contact-form label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--color-text);
+    }
+    
+    .contact-form input, .contact-form textarea, .contact-form select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      background: var(--color-white);
+      color: var(--color-text);
+      font-family: inherit;
+      font-size: 1em;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-sizing: border-box;
+    }
+    
+    .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(122,158,126,0.18);
+    }
+    
+    .contact-form .btn-send {
+      display: inline-block;
+      background: var(--color-primary);
+      color: var(--color-white);
+      border: none;
+      border-radius: 6px;
+      padding: 12px 24px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s;
+      width: 100%;
+      box-shadow: 0 4px 15px rgba(122, 158, 126, 0.3);
+    }
+    
+    .contact-form .btn-send:hover {
+      background: var(--color-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(122, 158, 126, 0.4);
+    }
+
+    /* Champ honeypot */
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      font-size: 0.95em;
+      color: var(--color-text);
+      padding: 30px 20px;
+      border-top: 1px solid var(--color-border);
+      background-color: var(--color-bg);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-left,
+    .footer-right {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-left a,
+    .footer-right a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-left a:hover,
+    .footer-right a:hover {
+      color: var(--color-primary-hover);
+      text-decoration: underline;
+    }
+
+    .footer-right {
+      text-align: right;
+      line-height: 1.8;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.85em;
+      color: #666;
+    }
+
+    .footer-bottom a {
+      color: var(--color-primary);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      header {
+        padding: 15px 20px;
+      }
+
+      nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background-color: var(--color-bg);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: left 0.3s;
+        z-index: 99;
+      }
+
+      nav.active {
+        left: 0;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+      
+      .contact {
+        padding: 30px 20px;
+      }
+      
+      .contact-info h1 {
+        font-size: 2em;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .footer-right {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-form {
+        padding: 20px 15px;
+      }
+      
+      .map-embed {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <a href="index.html" class="logo">Domaine MORCHOISNE</a>
+    
+    <!-- Menu hamburger (mobile) -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="nos-valeurs.html">Nos Valeurs</a>
+      <a href="nos-vins.html">Nos Vins</a>
+      <a href="nos-vignes.html">Nos Vignes</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== Corps : section Contact ===== -->
+  <main class="contact">
+    <div class="contact-wrapper">
+      <!-- Colonne gauche : coordonnées -->
+      <div class="contact-info">
+        <h1>Nous contacter</h1>
+        
+        <address style="font-style: normal;" id="contact-address">
+          <strong>Domaine MORCHOISNE</strong><br>
+          <span style="color: #999;">Chargement...</span>
+        </address>
+
+        <a href="#" id="email-link-contact" title="Nous contacter par email">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" class="social-icon">
+          <span id="email-display-contact">Chargement...</span>
+        </a>
+
+        <!-- Horaires d'ouverture -->
+        <div class="opening-hours">
+          <h3>Horaires de visite</h3>
+          <p><strong>Sur rendez-vous uniquement</strong></p>
+          <p>Lundi - Vendredi : 9h - 18h</p>
+          <p>Week-end : 10h - 17h</p>
+          <p><em>Dégustations et visites du domaine possibles</em></p>
+        </div>
+
+        <!-- Carte Google -->
+        <div class="map-block">
+          <div class="map-embed">
+            <iframe
+              id="google-map"
+              src=""
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="map-actions">
+            <a href="#" id="google-maps-link" target="_blank">
+              Ouvrir dans Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colonne droite : formulaire -->
+      <form class="contact-form" method="POST" action="https://formspree.io/f/xwprpqee">
+        <h2>Envoyez-nous un message</h2>
+        
+        <div class="field">
+          <label for="cf-name">Nom complet *</label>
+          <input type="text" id="cf-name" name="name" required maxlength="100" placeholder="Votre nom et prénom">
+        </div>
+        
+        <div class="field">
+          <label for="cf-email">Adresse e-mail *</label>
+          <input type="email" id="cf-email" name="email" required maxlength="150" placeholder="votre@email.com">
+        </div>
+        
+        <div class="field">
+          <label for="cf-phone">Téléphone</label>
+          <input type="tel" id="cf-phone" name="phone" maxlength="30" placeholder="06 12 34 56 78">
+        </div>
+        
+        <div class="field">
+          <label for="cf-subject-type">Type de demande</label>
+          <select id="cf-subject-type" name="subject_type">
+            <option value="">Sélectionnez...</option>
+            <option value="visite">Visite du domaine</option>
+            <option value="degustation">Dégustation</option>
+            <option value="achat">Achat de vins</option>
+            <option value="partenariat">Partenariat</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        
+        <div class="field">
+          <label for="cf-subject">Sujet</label>
+          <input type="text" id="cf-subject" name="subject" maxlength="150" placeholder="Objet de votre message">
+        </div>
+        
+        <div class="field">
+          <label for="cf-message">Message *</label>
+          <textarea id="cf-message" name="message" required rows="6" maxlength="3000" placeholder="Décrivez votre demande..."></textarea>
+        </div>
+
+        <!-- Champ caché : redirection après envoi -->
+        <input type="hidden" name="_redirect" value="https://domaine-morchoisne.github.io/Domaine-Morchoisne/merci.html">
+        
+        <!-- Champ piège anti-spam (honeypot) -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="website">Ne pas remplir</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn-send">Envoyer le message</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <!-- Instagram -->
+        <a href="#" id="instagram-link" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="social-icon">
+          <span>Suivez-nous sur Instagram</span>
+        </a>
+        <br><br>
+        
+        <!-- Email -->
+        <a href="#" id="email-link" title="Nous contacter par email">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" class="social-icon">
+          <span class="email-protected" id="email-display">Nous contacter</span>
+        </a>
+      </div>
+
+      <div class="footer-right" id="footer-address">
+        <span style="color: #999;">Chargement...</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; <span id="current-year"></span> Domaine MORCHOISNE - Tous droits réservés<br>
+        <a href="mentions-legales.html">Mentions Légales</a> | 
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== Chargement de la configuration ===== -->
+  <script src="config.js"></script>
+  
+  <!-- ===== Scripts ===== -->
+  <script>
+    // ==========================================
+    // FONCTION : Menu mobile
+    // ==========================================
+    function toggleMenu() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('active');
+    }
+
+    // ==========================================
+    // FONCTION : Année courante
+    // ==========================================
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // ==========================================
+    // FONCTION : Charger les données depuis config.js
+    // ==========================================
+    document.addEventListener('DOMContentLoaded', function() {
+      // Vérifier si CONFIG est chargé
+      if (typeof CONFIG === 'undefined') {
+        console.error('❌ Le fichier config.js n\'a pas pu être chargé !');
+        return;
+      }
+
+      console.log('✅ Configuration chargée avec succès');
+
+      // ==========================================
+      // Charger l'adresse dans la section contact
+      // ==========================================
+      const contactAddress = document.getElementById('contact-address');
+      if (contactAddress && CONFIG.address && CONFIG.owners) {
+        contactAddress.innerHTML = `
+          <strong>Domaine MORCHOISNE</strong><br>
+          ${CONFIG.owners.displayName || 'MORCHOISNE Pierre-Louis & Philippe'}<br>
+          ${CONFIG.address.street || ''}<br>
+          ${CONFIG.address.postalCode || ''} ${CONFIG.address.city || ''}
+        `;
+      }
+
+      // ==========================================
+      // Charger l'email dans la section contact (avec protection)
+      // ==========================================
+      const emailLinkContact = document.getElementById('email-link-contact');
+      const emailDisplayContact = document.getElementById('email-display-contact');
+      
+      if (emailLinkContact && CONFIG.contact && CONFIG.contact.email) {
+        emailLinkContact.href = 'mailto:' + CONFIG.contact.email;
+        emailDisplayContact.textContent = CONFIG.contact.email;
+      }
+
+      // ==========================================
+      // Charger l'email dans le footer (avec protection anti-spam)
+      // ==========================================
+      const emailLink = document.getElementById('email-link');
+      const emailDisplay = document.getElementById('email-display');
+      
+      if (emailLink && CONFIG.contact && CONFIG.contact.email) {
+        emailLink.href = 'mailto:' + CONFIG.contact.email;
+        
+        if (CONFIG.contact.emailDisplay) {
+          emailDisplay.textContent = CONFIG.contact.emailDisplay;
+        } else {
+          const [user, domain] = CONFIG.contact.email.split('@');
+          emailDisplay.textContent = user + ' [at] ' + domain;
+        }
+
+        emailLink.addEventListener('click', function(e) {
+          if (emailDisplay.textContent.includes('[at]')) {
+            e.preventDefault();
+            if (confirm('Voulez-vous ouvrir votre client email ?')) {
+              window.location.href = this.href;
+            }
+          }
+        });
+      }
+
+      // ==========================================
+      // Charger le lien Instagram
+      // ==========================================
+      const instagramLink = document.getElementById('instagram-link');
+      if (instagramLink && CONFIG.contact && CONFIG.contact.instagram) {
+        instagramLink.href = CONFIG.contact.instagram;
+      }
+
+      // ==========================================
+      // Charger l'adresse dans le footer
+      // ==========================================
+      const footerAddress = document.getElementById('footer-address');
+      if (footerAddress && CONFIG.address && CONFIG.owners) {
+        footerAddress.innerHTML = `
+          <strong>${CONFIG.owners.displayName || 'Domaine MORCHOISNE'}</strong><br>
+          ${CONFIG.address.street || ''}<br>
+          ${CONFIG.address.postalCode || ''} ${CONFIG.address.city || ''}<br>
+          ${CONFIG.address.country === 'FR' ? 'France' : CONFIG.address.country || ''}
+        `;
+      }
+
+      // ==========================================
+      // Charger Google Maps
+      // ==========================================
+      if (CONFIG.address) {
+        const fullAddress = `${CONFIG.address.street}, ${CONFIG.address.postalCode} ${CONFIG.address.city}`;
+        const encodedAddress = encodeURIComponent(fullAddress);
+        
+        // Iframe embed
+        const mapIframe = document.getElementById('google-map');
+        if (mapIframe) {
+          mapIframe.src = `https://www.google.com/maps?q=${encodedAddress}&output=embed`;
+        }
+        
+        // Lien externe
+        const mapsLink = document.getElementById('google-maps-link');
+        if (mapsLink) {
+          mapsLink.href = `https://www.google.com/maps?q=${encodedAddress}`;
+        }
+      }
+
+      // ==========================================
+      // Mettre à jour les métadonnées Open Graph dynamiquement
+      // ==========================================
+      if (CONFIG.seo) {
+        const canonicalLink = document.querySelector('link[rel="canonical"]');
+        if (canonicalLink && CONFIG.seo.siteUrl) {
+          canonicalLink.href = CONFIG.seo.siteUrl + 'contact.html';
+        }
+
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl && CONFIG.seo.siteUrl) {
+          ogUrl.content = CONFIG.seo.siteUrl + 'contact.html';
+        }
+
+        const ogImage = document.querySelector('meta[property="og:image"]');
+        if (ogImage && CONFIG.seo.defaultImage) {
+          ogImage.content = CONFIG.seo.defaultImage;
+        }
+      }
+    });
+
+    // ==========================================
+    // Fermer le menu mobile en cliquant en dehors
+    // ==========================================
+    document.addEventListener('click', function(event) {
+      const nav = document.getElementById('main-nav');
+      const menuToggle = document.querySelector('.menu-toggle');
+      
+      if (nav.classList.contains('active') && 
+          !nav.contains(event.target) && 
+          !menuToggle.contains(event.target)) {
+        nav.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

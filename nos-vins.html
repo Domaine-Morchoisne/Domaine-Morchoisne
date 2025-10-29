@@ -1,0 +1,766 @@
+<!DOCTYPE html>    
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Titre et SEO -->
+  <title>Domaine MORCHOISNE - Nos Vins</title>
+  <meta name="description" content="Découvrez les vins du Domaine MORCHOISNE, produits à partir des cépages Floréal et Voltis en agriculture biologique à Bonvilliers. Des vins frais, élégants et innovants.">
+  <meta name="keywords" content="Domaine Morchoisne,vin bio Essonne,domaine viticole Île-de-France, vin bio, Voltis, Floréal,vin biologique, Morigny-Champigny, vigneron bio, vin blanc bio, viticulture durable, père et fils, Bonvilliers, Essonne">
+  <meta name="author" content="Pierre-Louis Morchoisne">
+
+  <!-- Localisation -->
+  <meta name="geo.region" content="FR-91">
+  <meta name="geo.placename" content="Morigny-Champigny">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Domaine MORCHOISNE - Nos Vins">
+  <meta property="og:description" content="Découvrez les vins du Domaine MORCHOISNE, produits à partir des cépages Floréal et Voltis en agriculture biologique à Bonvilliers. Des vins frais, élégants et innovants.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#7A9E7E">
+  <meta name="msapplication-TileColor" content="#7A9E7E">
+  <meta name="theme-color" content="#7A9E7E">
+  
+  <!-- Canonical et indexation -->
+  <link rel="canonical" href="">
+  <meta name="robots" content="index, follow">
+  
+  <style>
+    /* ===== Variables CSS ===== */
+    :root {
+      --color-bg: #F7F0E6;
+      --color-text: #3A2F1F;
+      --color-primary: #7A9E7E;
+      --color-primary-hover: #6B8A6F;
+      --color-border: #DAD2C8;
+      --color-white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      min-height: 100svh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      line-height: 1.6;
+    }
+
+    /* ===== Header ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    header a.logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-decoration: none;
+      color: var(--color-text);
+      transition: color 0.3s;
+    }
+
+    header a.logo:hover {
+      color: var(--color-primary);
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 1em;
+      color: var(--color-text);
+      transition: color 0.3s;
+      position: relative;
+    }
+    
+    nav a:hover,
+    nav a.active {
+      color: var(--color-primary);
+    }
+
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: var(--color-primary);
+    }
+
+    /* ===== Menu mobile ===== */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--color-text);
+      transition: all 0.3s;
+    }
+
+    /* ===== Section principale ===== */
+    .wines-section {
+      padding: 50px 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .wines-header {
+      text-align: center;
+      margin-bottom: 50px;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .wines-header h1 {
+      font-size: 2.5em;
+      color: var(--color-primary);
+      margin: 0 0 15px 0;
+    }
+
+    .wines-header p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: var(--color-text);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ===== Gamme de vins ===== */
+    .wine-range {
+      margin-bottom: 60px;
+    }
+
+    .range-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .range-title h2 {
+      font-size: 2em;
+      color: var(--color-primary);
+      margin: 0 0 10px 0;
+    }
+
+    .range-subtitle {
+      font-size: 1.1em;
+      color: var(--color-text);
+      font-style: italic;
+    }
+
+    /* ===== Bouteille avec étiquette ===== */
+    .bottle-showcase {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0;
+      gap: 60px;
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    }
+
+    .bottle-container {
+      position: relative;
+      text-align: center;
+    }
+
+    .bottle-image img {
+      width: clamp(140px, 22vw, 320px);
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-inline: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+      transition: transform 0.3s ease;
+    }
+
+    .bottle-image img:hover {
+      transform: scale(1.05);
+    }
+
+    .bottle-text {
+      max-width: 520px;
+    }
+    
+    .bottle-text h3 {
+      color: var(--color-primary);
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+    
+    .bottle-text p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: var(--color-text);
+    }
+    
+    .bottle-text .notes {
+      color: #5A5A5A;
+      font-style: italic;
+    }
+
+    /* ===== Millésimes disponibles ===== */
+    .vintages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .vintage-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 2px 8px rgba(58,47,31,0.06);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 0.8s ease-out backwards;
+    }
+
+    .vintage-card:nth-child(1) { animation-delay: 0.3s; }
+    .vintage-card:nth-child(2) { animation-delay: 0.4s; }
+    .vintage-card:nth-child(3) { animation-delay: 0.5s; }
+
+    .vintage-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(58,47,31,0.1);
+    }
+
+    .vintage-year {
+      font-size: 1.8em;
+      color: var(--color-primary);
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .vintage-details {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .vintage-details p {
+      margin: 8px 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted var(--color-border);
+      padding-bottom: 5px;
+    }
+
+    .vintage-details strong {
+      color: var(--color-text);
+    }
+
+    .vintage-notes {
+      font-style: italic;
+      color: #5A5A5A;
+      font-size: 0.95em;
+      line-height: 1.4;
+      margin-top: 15px;
+      text-align: left;
+    }
+
+    .availability {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .available {
+      background-color: #E8F5E8;
+      color: #2E7D2E;
+    }
+
+    .limited {
+      background-color: #FFF3CD;
+      color: #856404;
+    }
+
+    .sold-out {
+      background-color: #F8D7DA;
+      color: #721C24;
+    }
+
+    /* ===== CTA Contact ===== */
+    .contact-cta {
+      text-align: center;
+      margin-top: 60px;
+      padding: 40px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      animation: fadeInUp 0.8s ease-out 0.6s backwards;
+    }
+
+    .contact-cta h3 {
+      color: var(--color-primary);
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    .contact-cta p {
+      margin-bottom: 25px;
+      color: var(--color-text);
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 35px;
+      background-color: var(--color-primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(122, 158, 126, 0.3);
+    }
+
+    .cta-button:hover {
+      background-color: var(--color-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(122, 158, 126, 0.4);
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      font-size: 0.95em;
+      color: var(--color-text);
+      padding: 30px 20px;
+      border-top: 1px solid var(--color-border);
+      background-color: var(--color-bg);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-left,
+    .footer-right {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-left a,
+    .footer-right a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .footer-left a:hover,
+    .footer-right a:hover {
+      color: var(--color-primary-hover);
+      text-decoration: underline;
+    }
+    
+    .social-icon {
+      width: 22px;
+      height: 22px;
+      vertical-align: middle;
+    }
+    
+    .footer-right {
+      text-align: right;
+      line-height: 1.8;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.85em;
+      color: #666;
+    }
+
+    .footer-bottom a {
+      color: var(--color-primary);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background-color: var(--color-bg);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: left 0.3s;
+        z-index: 99;
+      }
+
+      nav.active {
+        left: 0;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+      
+      .wines-section {
+        padding: 30px 20px;
+      }
+      
+      .wines-header h1 {
+        font-size: 2em;
+      }
+      
+      .bottle-showcase {
+        flex-direction: column;
+        gap: 30px;
+      }
+      
+      .vintages-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .footer-right {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <a href="index.html" class="logo">Domaine MORCHOISNE</a>
+    
+    <!-- Menu hamburger (mobile) -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="nos-valeurs.html">Nos Valeurs</a>
+      <a href="nos-vins.html" class="active">Nos Vins</a>
+      <a href="nos-vignes.html">Nos Vignes</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== Section principale ===== -->
+  <main class="wines-section">
+    <!-- En-tête -->
+    <div class="wines-header">
+      <h1>Nos Vins</h1>
+      <p>Une gamme unique de vins blancs biologiques, expression pure de notre terroir et de notre savoir-faire familial. Chaque millésime raconte l'histoire d'une année, d'un climat, d'une passion.</p>
+    </div>
+
+    <!-- Bouteille showcase -->
+    <div class="bottle-showcase">
+      <div class="bottle-image">
+        <img src="bouteille 2023.jpg" alt="Illustration stylisée bouteille 2023">
+      </div>
+      <div class="bottle-text">
+        <h3>Floréal - Voltis</h3>
+        <p>
+          Des arômes floraux délicats avec des notes de fruits blancs et une belle fraîcheur en bouche. 
+          Un vin élégant qui accompagne parfaitement vos moments de convivialité.
+        </p>
+        <p class="notes">
+          Notre cuvée signature en agriculture biologique
+        </p>
+      </div>
+    </div>
+
+    <!-- Millésimes disponibles -->
+    <div class="vintages-grid">
+      <!-- Millésime 2025 -->
+      <div class="vintage-card">
+        <div class="vintage-year">2025</div>
+        <div class="vintage-details">
+          <p><strong>Degré:</strong> <span>% vol</span></p>
+          <p><strong>Production:</strong> <span>? bouteilles</span></p>
+          <p><strong>Récolte:</strong> <span>Septembre 2025</span></p>
+          <p><strong>Mise en bouteille:</strong> <span>Mai 2026</span></p>
+        </div>
+        <div class="vintage-notes">
+          Millésime exceptionnel ! Un été chaud suivi d'un automne doux ont permis une maturation optimale. 
+          Vin frais et équilibré avec une belle complexité aromatique.
+        </div>
+        <div class="availability sold-out">
+          ✗ A venir
+        </div>
+      </div>
+
+      <!-- Millésime 2024 -->
+      <div class="vintage-card">
+        <div class="vintage-year">2024</div>
+        <div class="vintage-details">
+          <p><strong>Degré:</strong> <span>12% vol</span></p>
+          <p><strong>Production:</strong> <span>1 000 bouteilles</span></p>
+          <p><strong>Récolte:</strong> <span>Octobre 2024</span></p>
+          <p><strong>Mise en bouteille:</strong> <span>Mai 2025</span></p>
+        </div>
+        <div class="vintage-notes">
+          Notre seconde récolte, marquée par un caractère plus minéral. 
+          Un vin qui gagne en complexité avec le temps, parfait pour la garde.
+        </div>
+        <div class="availability available">
+          ✓ Disponible
+        </div>
+      </div>
+
+      <!-- Millésime 2023 -->
+      <div class="vintage-card">
+        <div class="vintage-year">2023</div>
+        <div class="vintage-details">
+          <p><strong>Degré:</strong> <span>11,5% vol</span></p>
+          <p><strong>Production:</strong> <span>700 bouteilles</span></p>
+          <p><strong>Récolte:</strong> <span>Octobre 2023</span></p>
+          <p><strong>Mise en bouteille:</strong> <span>Mai 2024</span></p>
+        </div>
+        <div class="vintage-notes">
+          Notre première récolte ! Un millésime historique pour le domaine. 
+          Vin délicat aux arômes floraux prononcés, témoignage de nos débuts.
+        </div>
+        <div class="availability limited">
+          ⚠ Stock limité
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to action -->
+    <div class="contact-cta">
+      <h3>Intéressé par nos vins ?</h3>
+      <p>Contactez-nous pour organiser une dégustation ou commander nos millésimes disponibles. 
+      Nous serons ravis de vous faire découvrir notre passion !</p>
+      <a href="contact.html" class="cta-button">Nous contacter</a>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <!-- Instagram -->
+        <a href="#" id="instagram-link" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="social-icon">
+          <span>Suivez-nous sur Instagram</span>
+        </a>
+        <br><br>
+        
+        <!-- Email (protection anti-spam) -->
+        <a href="#" id="email-link" title="Nous contacter par email">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" class="social-icon">
+          <span class="email-protected" id="email-display">Nous contacter</span>
+        </a>
+      </div>
+
+      <div class="footer-right" id="footer-address">
+        <!-- Adresse chargée dynamiquement depuis config.js -->
+        <span style="color: #999;">Chargement de l'adresse...</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; <span id="current-year"></span> Domaine MORCHOISNE - Tous droits réservés<br>
+        <a href="mentions-legales.html">Mentions Légales</a> | 
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== Chargement de la configuration ===== -->
+  <script src="config.js"></script>
+  
+  <!-- ===== Scripts ===== -->
+  <script>
+    // ==========================================
+    // FONCTION : Menu mobile
+    // ==========================================
+    function toggleMenu() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('active');
+    }
+
+    // ==========================================
+    // FONCTION : Année courante
+    // ==========================================
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // ==========================================
+    // FONCTION : Charger les données depuis config.js
+    // ==========================================
+    document.addEventListener('DOMContentLoaded', function() {
+      // Vérifier si CONFIG est chargé
+      if (typeof CONFIG === 'undefined') {
+        console.error('❌ Le fichier config.js n\'a pas pu être chargé !');
+        return;
+      }
+
+      console.log('✅ Configuration chargée avec succès');
+      
+      // ==========================================
+      // Mettre à jour les noms des propriétaires dans le texte
+      // ==========================================
+      const ownersNamesElement = document.getElementById('owners-names');
+      if (ownersNamesElement && CONFIG.owners && CONFIG.owners.names) {
+        // Afficher "Prénom1 et Prénom2" (extraire juste les prénoms)
+        const firstNames = CONFIG.owners.names.map(name => name.split(' ')[0]);
+        ownersNamesElement.textContent = firstNames.join(' et ');
+      }
+      
+      // ==========================================
+      // Charger l'email (avec protection anti-spam)
+      // ==========================================
+      const emailLink = document.getElementById('email-link');
+      const emailDisplay = document.getElementById('email-display');
+      
+      if (emailLink && CONFIG.contact && CONFIG.contact.email) {
+        // Créer le lien mailto
+        emailLink.href = 'mailto:' + CONFIG.contact.email;
+        
+        // Afficher une version obfusquée
+        if (CONFIG.contact.emailDisplay) {
+          emailDisplay.textContent = CONFIG.contact.emailDisplay;
+        } else {
+          const [user, domain] = CONFIG.contact.email.split('@');
+          emailDisplay.textContent = user + ' [at] ' + domain;
+        }
+
+        // Au clic, révéler le vrai email
+        emailLink.addEventListener('click', function(e) {
+          if (emailDisplay.textContent.includes('[at]')) {
+            e.preventDefault();
+            if (confirm('Voulez-vous ouvrir votre client email ?')) {
+              window.location.href = this.href;
+            }
+          }
+        });
+      }
+
+      // ==========================================
+      // Charger le lien Instagram
+      // ==========================================
+      const instagramLink = document.getElementById('instagram-link');
+      if (instagramLink && CONFIG.contact && CONFIG.contact.instagram) {
+        instagramLink.href = CONFIG.contact.instagram;
+      }
+
+      // ==========================================
+      // Charger l'adresse
+      // ==========================================
+      const footerAddress = document.getElementById('footer-address');
+      if (footerAddress && CONFIG.address && CONFIG.owners) {
+        footerAddress.innerHTML = `
+          <strong>${CONFIG.owners.displayName || 'Domaine MORCHOISNE'}</strong><br>
+          ${CONFIG.address.street || ''}<br>
+          ${CONFIG.address.postalCode || ''} ${CONFIG.address.city || ''}<br>
+          ${CONFIG.address.country === 'FR' ? 'France' : CONFIG.address.country || ''}
+        `;
+      }
+
+      // ==========================================
+      // Mettre à jour les métadonnées Open Graph dynamiquement
+      // ==========================================
+      if (CONFIG.seo) {
+        // Canonical URL
+        const canonicalLink = document.querySelector('link[rel="canonical"]');
+        if (canonicalLink && CONFIG.seo.siteUrl) {
+          canonicalLink.href = CONFIG.seo.siteUrl + 'nos-vins.html';
+        }
+
+        // Open Graph URL
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl && CONFIG.seo.siteUrl) {
+          ogUrl.content = CONFIG.seo.siteUrl + 'nos-vins.html';
+        }
+
+        // Open Graph Image
+        const ogImage = document.querySelector('meta[property="og:image"]');
+        if (ogImage && CONFIG.seo.defaultImage) {
+          ogImage.content = CONFIG.seo.defaultImage;
+        }
+      }
+    });
+
+    // ==========================================
+    // Fermer le menu mobile en cliquant en dehors
+    // ==========================================
+    document.addEventListener('click', function(event) {
+      const nav = document.getElementById('main-nav');
+      const menuToggle = document.querySelector('.menu-toggle');
+      
+      if (nav.classList.contains('active') && 
+          !nav.contains(event.target) && 
+          !menuToggle.contains(event.target)) {
+        nav.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

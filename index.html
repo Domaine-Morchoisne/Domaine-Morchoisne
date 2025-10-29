@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Titre et description (SEO) -->
+  <title>Domaine MORCHOISNE - Vignoble familial bio en Île-de-France</title>
+  <meta name="description" content="Le Domaine MORCHOISNE, vignoble familial biologique à Bonvilliers près d'Étampes, cultive les cépages Floréal et Voltis. Le pari fou d'un père et d'un fils pour redonner vie à un vignoble oublié.">
+  <meta name="keywords" content="Domaine Morchoisne,vin bio Essonne,domaine viticole Île-de-France,vin bio,Voltis,Floréal,vin biologique,Morigny-Champigny,vigneron bio,vin blanc bio,viticulture durable,père et fils,Bonvilliers,Essonne">
+  <meta name="author" content="Pierre-Louis Morchoisne">
+
+  <!-- Localisation (chargée dynamiquement) -->
+  <meta name="geo.region" content="FR-91">
+  <meta name="geo.placename" content="Morigny-Champigny">
+  
+  <!-- Open Graph (réseaux sociaux) -->
+  <meta property="og:title" content="Domaine MORCHOISNE - Vignoble familial bio en Île-de-France">
+  <meta property="og:description" content="Le Domaine MORCHOISNE, vignoble familial biologique à Bonvilliers près d'Étampes.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#7A9E7E">
+  <meta name="msapplication-TileColor" content="#7A9E7E">
+  <meta name="theme-color" content="#7A9E7E">
+  
+  <!-- Canonical et indexation -->
+  <link rel="canonical" href="">
+  <meta name="robots" content="index, follow">
+  
+  <style>
+    /* ===== Reset et variables ===== */
+    * {
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --color-bg: #F7F0E6;
+      --color-text: #3A2F1F;
+      --color-primary: #7A9E7E;
+      --color-primary-hover: #6B8A6F;
+      --color-border: #DAD2C8;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    /* ===== En-tête (header) ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    header a.logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-decoration: none;
+      color: var(--color-text);
+      transition: color 0.3s;
+    }
+
+    header a.logo:hover {
+      color: var(--color-primary);
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 1em;
+      color: var(--color-text);
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--color-primary);
+    }
+
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: var(--color-primary);
+    }
+
+    /* ===== Menu mobile (hamburger) ===== */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--color-text);
+      transition: all 0.3s;
+    }
+
+    /* ===== Section Hero ===== */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.8fr 1.2fr;
+      align-items: center;
+      column-gap: 40px;
+      padding: 60px 50px;
+      min-height: 70vh;
+    }
+
+    .hero-text {
+      text-align: left;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5em;
+      line-height: 1.2;
+      margin: 0;
+      color: var(--color-primary);
+      padding-left: 1cm;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .hero-text p {
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: var(--color-text);
+      max-width: 1000px;
+      line-height: 1.6;
+      padding-left: 1cm;
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      margin-left: 1cm;
+      padding: 15px 35px;
+      background-color: var(--color-primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      transition: all 0.3s;
+      animation: fadeInUp 0.8s ease-out 0.4s backwards;
+      box-shadow: 0 4px 15px rgba(122, 158, 126, 0.3);
+    }
+
+    .cta-button:hover {
+      background-color: var(--color-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(122, 158, 126, 0.4);
+    }
+
+    .hero-image {
+      text-align: right;
+      animation: fadeIn 1s ease-out 0.3s backwards;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+      opacity: 0.4;
+      display: block;
+      border-radius: 10px;
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 0.4;
+      }
+    }
+
+    /* ===== Pied de page (footer) ===== */
+    footer {
+      font-size: 0.95em;
+      color: var(--color-text);
+      padding: 30px 20px;
+      border-top: 1px solid var(--color-border);
+      background-color: var(--color-bg);
+      margin-top: 50px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-left,
+    .footer-right {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-left a,
+    .footer-right a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-left a:hover,
+    .footer-right a:hover {
+      color: var(--color-primary-hover);
+      text-decoration: underline;
+    }
+
+    .social-icon {
+      width: 22px;
+      height: 22px;
+      vertical-align: middle;
+    }
+
+    .footer-right {
+      text-align: right;
+      line-height: 1.8;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.85em;
+      color: #666;
+    }
+
+    .footer-bottom a {
+      color: var(--color-primary);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* Protection anti-spam pour email */
+    .email-protected {
+      cursor: pointer;
+    }
+
+    /* ===== Responsive Design ===== */
+    @media (max-width: 1024px) {
+      .hero {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+        padding: 40px 30px;
+      }
+      
+      .hero-text h1 {
+        font-size: 2.8em;
+        padding-left: 0;
+      }
+      
+      .hero-text p {
+        padding-left: 0;
+      }
+      
+      .cta-button {
+        margin-left: 0;
+      }
+
+      .hero-image {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background-color: var(--color-bg);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: left 0.3s;
+      }
+
+      nav.active {
+        left: 0;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .hero-text h1 {
+        font-size: 2.2em;
+      }
+
+      .hero-text p {
+        font-size: 1em;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-right {
+        text-align: center;
+      }
+    }
+
+    /* ===== Message de chargement ===== */
+    .loading {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      color: var(--color-primary);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <a href="index.html" class="logo" id="site-name">Domaine MORCHOISNE</a>
+    
+    <!-- Menu hamburger (mobile) -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="main-nav">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="nos-valeurs.html">Nos Valeurs</a>
+      <a href="nos-vins.html">Nos Vins</a>
+      <a href="nos-vignes.html">Nos Vignes</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Message de chargement -->
+  <div class="loading" id="loading">
+    Chargement des informations...
+  </div>
+
+  <!-- ===== Section Hero ===== -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Domaine Familial<br>MORCHOISNE</h1>
+      <p>
+        Le pari fou d'un père et de son fils : redonner vie à un vignoble oublié.<br>
+        Une aventure familiale où chaque bouteille raconte une histoire de passion et de nature.
+      </p>
+      <a href="nos-vins.html" class="cta-button">Découvrir nos vins</a>
+    </div>
+
+    <div class="hero-image">
+      <img
+        src="20250922_1808_Dessins Contrastés Simples_remix_01k5s2s7vfebe9dewz07x2nn8t.jpg"
+        alt="Illustration stylisée du Domaine Morchoisne"
+        onerror="this.style.display='none'">
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <!-- Instagram -->
+        <a href="#" id="instagram-link" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="social-icon">
+          <span>Suivez-nous sur Instagram</span>
+        </a>
+        <br><br>
+        
+        <!-- Email (protection anti-spam) -->
+        <a href="#" id="email-link" title="Nous contacter par email">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" class="social-icon">
+          <span class="email-protected" id="email-display">Nous contacter</span>
+        </a>
+      </div>
+
+      <div class="footer-right" id="footer-address">
+        <!-- Adresse chargée dynamiquement depuis config.js -->
+        <span style="color: #999;">Chargement de l'adresse...</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; <span id="current-year"></span> Domaine MORCHOISNE - Tous droits réservés<br>
+        <a href="mentions-legales.html">Mentions Légales</a> | 
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== Chargement de la configuration ===== -->
+  <script src="config.js"></script>
+  
+  <!-- ===== Scripts ===== -->
+  <script>
+    // ==========================================
+    // FONCTION : Afficher l'année courante
+    // ==========================================
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // ==========================================
+    // FONCTION : Menu mobile
+    // ==========================================
+    function toggleMenu() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('active');
+    }
+
+    // ==========================================
+    // FONCTION : Charger les données depuis config.js
+    // ==========================================
+    document.addEventListener('DOMContentLoaded', function() {
+      // Vérifier si CONFIG est chargé
+      if (typeof CONFIG === 'undefined') {
+        console.error('❌ Le fichier config.js n\'a pas pu être chargé !');
+        document.getElementById('loading').style.display = 'block';
+        document.getElementById('loading').textContent = 
+          '⚠️ Erreur : Impossible de charger la configuration. Vérifiez que config.js existe.';
+        return;
+      }
+
+      console.log('✅ Configuration chargée avec succès');
+
+      // ==========================================
+      // Charger l'email (avec protection anti-spam)
+      // ==========================================
+      const emailLink = document.getElementById('email-link');
+      const emailDisplay = document.getElementById('email-display');
+      
+      if (emailLink && CONFIG.contact && CONFIG.contact.email) {
+        // Créer le lien mailto (invisible pour les robots)
+        emailLink.href = 'mailto:' + CONFIG.contact.email;
+        
+        // Afficher une version obfusquée
+        if (CONFIG.contact.emailDisplay) {
+          emailDisplay.textContent = CONFIG.contact.emailDisplay;
+        } else {
+          // Si pas de version obfusquée, créer une protection basique
+          const [user, domain] = CONFIG.contact.email.split('@');
+          emailDisplay.textContent = user + ' [at] ' + domain;
+        }
+
+        // Au clic, révéler le vrai email
+        emailLink.addEventListener('click', function(e) {
+          if (emailDisplay.textContent.includes('[at]')) {
+            e.preventDefault();
+            if (confirm('Voulez-vous ouvrir votre client email ?')) {
+              window.location.href = this.href;
+            }
+          }
+        });
+      }
+
+      // ==========================================
+      // Charger le lien Instagram
+      // ==========================================
+      const instagramLink = document.getElementById('instagram-link');
+      if (instagramLink && CONFIG.contact && CONFIG.contact.instagram) {
+        instagramLink.href = CONFIG.contact.instagram;
+      }
+
+      // ==========================================
+      // Charger l'adresse
+      // ==========================================
+      const footerAddress = document.getElementById('footer-address');
+      if (footerAddress && CONFIG.address && CONFIG.owners) {
+        footerAddress.innerHTML = `
+          <strong>${CONFIG.owners.displayName || 'Domaine MORCHOISNE'}</strong><br>
+          ${CONFIG.address.street || ''}<br>
+          ${CONFIG.address.postalCode || ''} ${CONFIG.address.city || ''}<br>
+          ${CONFIG.address.country === 'FR' ? 'France' : CONFIG.address.country || ''}
+        `;
+      }
+
+      // ==========================================
+      // Mettre à jour les métadonnées Open Graph dynamiquement
+      // ==========================================
+      if (CONFIG.seo) {
+        // Canonical URL
+        const canonicalLink = document.querySelector('link[rel="canonical"]');
+        if (canonicalLink && CONFIG.seo.siteUrl) {
+          canonicalLink.href = CONFIG.seo.siteUrl + 'nos-vins.html';
+        }
+
+        // Open Graph URL
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl && CONFIG.seo.siteUrl) {
+          ogUrl.content = CONFIG.seo.siteUrl + 'nos-vins.html';
+        }
+
+        // Open Graph Image
+        const ogImage = document.querySelector('meta[property="og:image"]');
+        if (ogImage && CONFIG.seo.defaultImage) {
+          ogImage.content = CONFIG.seo.defaultImage;
+        }
+      }
+    });
+
+    // ==========================================
+    // Fermer le menu mobile en cliquant en dehors
+    // ==========================================
+    document.addEventListener('click', function(event) {
+      const nav = document.getElementById('main-nav');
+      const menuToggle = document.querySelector('.menu-toggle');
+      
+      if (nav.classList.contains('active') && 
+          !nav.contains(event.target) && 
+          !menuToggle.contains(event.target)) {
+        nav.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
