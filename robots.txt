@@ -33,7 +33,7 @@ Allow: /*.svg
 Allow: /*.webp
 
 # Indiquer où se trouve le sitemap
-Sitemap: https://domaine-morchoisne.github.io/Domaine-Morchoisne-Private/sitemap.xml
+Sitemap: https://domaine-morchoisne.github.io/Domaine-Morchoisne/sitemap.xml
 
 # Règles spécifiques pour différents moteurs de recherche
 # Google
