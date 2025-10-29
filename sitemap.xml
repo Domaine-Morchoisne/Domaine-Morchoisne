@@ -6,7 +6,7 @@
 
   <!-- Page d'accueil -->
   <url>
-    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne-Private/index.html</loc>
+    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne/index.html</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- Nos Valeurs -->
   <url>
-    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne-Private/nos-valeurs.html</loc>
+    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne/nos-valeurs.html</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -22,7 +22,7 @@
 
   <!-- Nos Vins -->
   <url>
-    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne-Private/nos-vins.html</loc>
+    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne/nos-vins.html</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -30,7 +30,7 @@
 
   <!-- Nos Vignes -->
   <url>
-    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne-Private/nos-vignes.html</loc>
+    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne/nos-vignes.html</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -38,7 +38,7 @@
 
   <!-- Galerie -->
   <url>
-    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne-Private/galerie.html</loc>
+    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne/galerie.html</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -46,7 +46,7 @@
 
   <!-- Contact -->
   <url>
-    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne-Private/contact.html</loc>
+    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne/contact.html</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -54,7 +54,7 @@
 
   <!-- Mentions Légales -->
   <url>
-    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne-Private/mentions-legales.html</loc>
+    <loc>https://domaine-morchoisne.github.io/Domaine-Morchoisne/mentions-legales.html</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
