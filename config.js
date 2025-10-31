@@ -12,7 +12,7 @@ const CONFIG = {
     email: "domaine.morchoisne@gmail.com",
     
     // Version obfusquée pour affichage public (protection anti-spam)
-    emailDisplay: "domaine.morchoisne [at] gmail.com",
+    emailDisplay: "domaine.morchoisne@gmail.com",
     
     // Téléphone (optionnel)
     phone: "",
@@ -119,3 +119,4 @@ if (typeof module !== 'undefined' && module.exports) {
 if (typeof window !== 'undefined') {
   window.CONFIG = CONFIG;
 }
+
