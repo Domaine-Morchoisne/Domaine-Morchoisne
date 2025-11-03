@@ -1,4 +1,4 @@
-<!DOCTYPE html>    
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -6,17 +6,17 @@
   
   <!-- Titre et SEO -->
   <title>Domaine MORCHOISNE - Nos Vins</title>
-  <meta name="description" content="Découvrez les vins du Domaine MORCHOISNE, produits à partir des cépages Floréal et Voltis en agriculture biologique à Bonvilliers. Des vins frais, élégants et innovants.">
-  <meta name="keywords" content="Domaine Morchoisne,vin bio Essonne,domaine viticole Île-de-France, vin bio, Voltis, Floréal,vin biologique, Morigny-Champigny, vigneron bio, vin blanc bio, viticulture durable, père et fils, Bonvilliers, Essonne">
+  <meta name="description" content="Découvrez nos vins blancs biologiques Floréal-Voltis. Domaine familial MORCHOISNE en Île-de-France, millésimes 2023, 2024 et 2025.">
+  <meta name="keywords" content="Domaine Morchoisne,vin bio Essonne,domaine viticole Île-de-France,vin bio,Voltis,Floréal,vin biologique,Morigny-Champigny,vigneron bio,vin blanc bio,viticulture durable,père et fils,Bonvilliers,Essonne">
   <meta name="author" content="Pierre-Louis Morchoisne">
 
   <!-- Localisation -->
   <meta name="geo.region" content="FR-91">
   <meta name="geo.placename" content="Morigny-Champigny">
   
-  <!-- Open Graph -->
+  <!-- Open Graph (réseaux sociaux) -->
   <meta property="og:title" content="Domaine MORCHOISNE - Nos Vins">
-  <meta property="og:description" content="Découvrez les vins du Domaine MORCHOISNE, produits à partir des cépages Floréal et Voltis en agriculture biologique à Bonvilliers. Des vins frais, élégants et innovants.">
+  <meta property="og:description" content="Découvrez nos vins blancs biologiques Floréal-Voltis. Domaine familial MORCHOISNE en Île-de-France.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:image" content="">
@@ -34,7 +34,7 @@
   <!-- Canonical et indexation -->
   <link rel="canonical" href="">
   <meta name="robots" content="index, follow">
-  
+
   <style>
     /* ===== Variables CSS ===== */
     :root {
@@ -44,18 +44,20 @@
       --color-primary-hover: #6B8A6F;
       --color-border: #DAD2C8;
       --color-white: #FFFFFF;
+      --color-gray: #5A5A5A;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    /* ===== Base & thème ===== */
     body {
       margin: 0;
       font-family: "Georgia", serif;
       background-color: var(--color-bg);
       color: var(--color-text);
-      min-height: 100svh;
+      min-height: 100vh;
       display: grid;
       grid-template-rows: auto 1fr auto;
       line-height: 1.6;
@@ -149,6 +151,14 @@
       margin: 0 0 15px 0;
     }
 
+    .separator {
+      width: 80px;
+      height: 4px;
+      background-color: var(--color-primary);
+      margin: 20px auto 25px auto;
+      border-radius: 2px;
+    }
+
     .wines-header p {
       font-size: 1.2em;
       line-height: 1.6;
@@ -165,6 +175,7 @@
     .range-title {
       text-align: center;
       margin-bottom: 40px;
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
     }
 
     .range-title h2 {
@@ -186,7 +197,7 @@
       align-items: center;
       margin: 40px 0;
       gap: 60px;
-      animation: fadeInUp 0.8s ease-out 0.2s backwards;
+      animation: fadeInUp 0.8s ease-out 0.3s backwards;
     }
 
     .bottle-container {
@@ -195,7 +206,7 @@
     }
 
     .bottle-image img {
-      width: clamp(140px, 22vw, 320px);
+      width: clamp(200px, 25vw, 350px);
       max-width: 100%;
       height: auto;
       display: block;
@@ -211,6 +222,7 @@
 
     .bottle-text {
       max-width: 520px;
+      flex: 1;
     }
     
     .bottle-text h3 {
@@ -218,22 +230,64 @@
       font-size: 2em;
       margin-bottom: 15px;
     }
-    
+
     .bottle-text p {
-      line-height: 1.6;
+      line-height: 1.7;
       margin-bottom: 15px;
       color: var(--color-text);
+      text-align: justify;
     }
-    
+
     .bottle-text .notes {
-      color: #5A5A5A;
+      color: var(--color-gray);
       font-style: italic;
     }
 
+    /* Section informations techniques */
+    .wine-info {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 30px;
+      margin: 40px 0;
+      box-shadow: 0 2px 8px rgba(58,47,31,0.06);
+      animation: fadeInUp 0.8s ease-out 0.4s backwards;
+    }
+
+    .wine-info h3 {
+      color: var(--color-primary);
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .wine-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .wine-info p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
     /* ===== Millésimes disponibles ===== */
+    .vintages-section {
+      animation: fadeInUp 0.8s ease-out 0.5s backwards;
+    }
+
+    .vintages-section h3 {
+      text-align: center;
+      color: var(--color-primary);
+      font-size: 1.8em;
+      margin-bottom: 30px;
+    }
+
     .vintages-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
       margin-top: 40px;
     }
@@ -246,16 +300,11 @@
       box-shadow: 0 2px 8px rgba(58,47,31,0.06);
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
-      animation: fadeInUp 0.8s ease-out backwards;
     }
 
-    .vintage-card:nth-child(1) { animation-delay: 0.3s; }
-    .vintage-card:nth-child(2) { animation-delay: 0.4s; }
-    .vintage-card:nth-child(3) { animation-delay: 0.5s; }
-
     .vintage-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(58,47,31,0.1);
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(58,47,31,0.15);
     }
 
     .vintage-year {
@@ -284,9 +333,9 @@
 
     .vintage-notes {
       font-style: italic;
-      color: #5A5A5A;
+      color: var(--color-gray);
       font-size: 0.95em;
-      line-height: 1.4;
+      line-height: 1.5;
       margin-top: 15px;
       text-align: left;
     }
@@ -314,6 +363,11 @@
       color: #721C24;
     }
 
+    .coming-soon {
+      background-color: #E3F2FD;
+      color: #1976D2;
+    }
+
     /* ===== CTA Contact ===== */
     .contact-cta {
       text-align: center;
@@ -334,6 +388,7 @@
     .contact-cta p {
       margin-bottom: 25px;
       color: var(--color-text);
+      line-height: 1.7;
     }
 
     .cta-button {
@@ -373,6 +428,7 @@
       padding: 30px 20px;
       border-top: 1px solid var(--color-border);
       background-color: var(--color-bg);
+      margin-top: 50px;
     }
 
     .footer-content {
@@ -472,6 +528,15 @@
         flex-direction: column;
         gap: 30px;
       }
+
+      .wine-info,
+      .contact-cta {
+        padding: 25px 20px;
+      }
+
+      .wine-info-grid {
+        grid-template-columns: 1fr;
+      }
       
       .vintages-grid {
         grid-template-columns: 1fr;
@@ -484,6 +549,16 @@
       
       .footer-right {
         text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .bottle-text h3 {
+        font-size: 1.5em;
+      }
+      
+      .vintage-card {
+        padding: 20px;
       }
     }
   </style>
@@ -515,79 +590,102 @@
     <!-- En-tête -->
     <div class="wines-header">
       <h1>Nos Vins</h1>
+      <div class="separator"></div>
       <p>Une gamme unique de vins blancs biologiques, expression pure de notre terroir et de notre savoir-faire familial. Chaque millésime raconte l'histoire d'une année, d'un climat, d'une passion.</p>
     </div>
-
-    <!-- Bouteille showcase -->
-    <div class="bottle-showcase">
-      <div class="bottle-image">
-        <img src="bouteille 2023.jpg" alt="Illustration stylisée bouteille 2023">
-      </div>
-      <div class="bottle-text">
-        <h3>Floréal - Voltis</h3>
-        <p>
-          Des arômes floraux délicats avec des notes de fruits blancs et une belle fraîcheur en bouche. 
-          Un vin élégant qui accompagne parfaitement vos moments de convivialité.
-        </p>
-        <p class="notes">
-          Notre cuvée signature en agriculture biologique
-        </p>
-      </div>
-    </div>
-
-    <!-- Millésimes disponibles -->
-    <div class="vintages-grid">
-      <!-- Millésime 2025 -->
-      <div class="vintage-card">
-        <div class="vintage-year">2025</div>
-        <div class="vintage-details">
-          <p><strong>Degré:</strong> <span>% vol</span></p>
-          <p><strong>Production:</strong> <span>? bouteilles</span></p>
-          <p><strong>Récolte:</strong> <span>Septembre 2025</span></p>
-          <p><strong>Mise en bouteille:</strong> <span>Mai 2026</span></p>
+      <!-- Bouteille showcase -->
+      <div class="bottle-showcase">
+        <div class="bottle-container">
+          <div class="bottle-image">
+            <img src="bouteille 2023.jpg" alt="Bouteille Floréal-Voltis 2023 Domaine Morchoisne" onerror="this.style.display='none'">
+          </div>
         </div>
-        <div class="vintage-notes">
-          Millésime exceptionnel ! Un été chaud suivi d'un automne doux ont permis une maturation optimale. 
-          Vin frais et équilibré avec une belle complexité aromatique.
-        </div>
-        <div class="availability sold-out">
-          ✗ A venir
+        
+        <div class="bottle-text">
+          <h3>Floréal - Voltis</h3>
+          <p>
+            Des arômes floraux délicats avec des notes de fruits blancs et une belle fraîcheur en bouche. Un vin élégant qui accompagne parfaitement vos moments de convivialité.
+          </p>
+          <p class="notes">
+            Notre cuvée signature en agriculture biologique.
+          </p>
         </div>
       </div>
 
-      <!-- Millésime 2024 -->
-      <div class="vintage-card">
-        <div class="vintage-year">2024</div>
-        <div class="vintage-details">
-          <p><strong>Degré:</strong> <span>12% vol</span></p>
-          <p><strong>Production:</strong> <span>1 000 bouteilles</span></p>
-          <p><strong>Récolte:</strong> <span>Octobre 2024</span></p>
-          <p><strong>Mise en bouteille:</strong> <span>Mai 2025</span></p>
-        </div>
-        <div class="vintage-notes">
-          Notre seconde récolte, marquée par un caractère plus minéral. 
-          Un vin qui gagne en complexité avec le temps, parfait pour la garde.
-        </div>
-        <div class="availability available">
-          ✓ Disponible
+      <!-- Informations techniques -->
+      <div class="wine-info">
+        <h3>Caractéristiques de notre vin</h3>
+        <div class="wine-info-grid">
+          <div>
+            <p><strong>Terroir :</strong> Sols argilo-calcaires d'Île-de-France, exposés sud pour une maturation optimale.</p>
+            <p><strong>Vinification :</strong> Fermentation en cuves inox thermorégulées, élevage sur lies fines pendant 4 mois.</p>
+            <p><strong>Agriculture biologique :</strong> Certifiée depuis 2021, respect de l'environnement et de la biodiversité.</p>
+          </div>
+          <div>
+            <p><strong>Dégustation :</strong> Robe dorée brillante, nez expressif aux notes florales et fruitées.</p>
+            <p><strong>Accords :</strong> Parfait en apéritif ou avec poissons grillés, fruits de mer, fromages de chèvre.</p>
+            <p><strong>Service :</strong> À servir frais entre 8°C et 10°C. Potentiel de garde : 2 à 4 ans.</p>
+          </div>
         </div>
       </div>
 
-      <!-- Millésime 2023 -->
-      <div class="vintage-card">
-        <div class="vintage-year">2023</div>
-        <div class="vintage-details">
-          <p><strong>Degré:</strong> <span>11,5% vol</span></p>
-          <p><strong>Production:</strong> <span>700 bouteilles</span></p>
-          <p><strong>Récolte:</strong> <span>Octobre 2023</span></p>
-          <p><strong>Mise en bouteille:</strong> <span>Mai 2024</span></p>
-        </div>
-        <div class="vintage-notes">
-          Notre première récolte ! Un millésime historique pour le domaine. 
-          Vin délicat aux arômes floraux prononcés, témoignage de nos débuts.
-        </div>
-        <div class="availability limited">
-          ⚠ Stock limité
+      <!-- Millésimes disponibles -->
+      <div class="vintages-section">
+        <h3>Nos Millésimes</h3>
+        <div class="vintages-grid">
+          <!-- Millésime 2023 -->
+          <div class="vintage-card">
+            <div class="vintage-year">2023</div>
+            <div class="vintage-details">
+              <p><strong>Degré:</strong> <span>12,5% vol</span></p>
+              <p><strong>Production:</strong> <span>5 120 bouteilles</span></p>
+              <p><strong>Récolte:</strong> <span>Octobre 2023</span></p>
+              <p><strong>Mise en bouteille:</strong> <span>Mai 2024</span></p>
+            </div>
+            <div class="vintage-notes">
+              Notre première récolte ! Un millésime historique pour le domaine. 
+              Vin délicat aux arômes floraux prononcés, témoignage de nos débuts.
+            </div>
+            <div class="availability limited">
+              ⚠ Stock limité
+            </div>
+          </div>
+
+          <!-- Millésime 2024 -->
+          <div class="vintage-card">
+            <div class="vintage-year">2024</div>
+            <div class="vintage-details">
+              <p><strong>Degré:</strong> <span>12% vol</span></p>
+              <p><strong>Production:</strong> <span>11 200 bouteilles</span></p>
+              <p><strong>Récolte:</strong> <span>Octobre 2024</span></p>
+              <p><strong>Mise en bouteille:</strong> <span>Mai 2025</span></p>
+            </div>
+            <div class="vintage-notes">
+              Excellent millésime marqué par un caractère plus minéral. 
+              Un vin qui gagne en complexité avec le temps.
+            </div>
+            <div class="availability available">
+              ✓ Disponible
+            </div>
+          </div>
+
+          <!-- Millésime 2025 -->
+          <div class="vintage-card">
+            <div class="vintage-year">2025</div>
+            <div class="vintage-details">
+              <p><strong>Degré:</strong> <span>En cours d'analyse</span></p>
+              <p><strong>Production:</strong> <span>...  bouteilles</span></p>
+              <p><strong>Récolte:</strong> <span>Septembre 2025</span></p>
+              <p><strong>Mise en bouteille:</strong> <span>Prévue mai 2026</span></p>
+            </div>
+            <div class="vintage-notes">
+              Récolte prometteuse ! Les conditions climatiques exceptionnelles de cette année 
+              laissent présager un millésime d'exception.
+            </div>
+            <div class="availability coming-soon">
+              🔄 En cours de vinification
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -596,7 +694,7 @@
     <div class="contact-cta">
       <h3>Intéressé par nos vins ?</h3>
       <p>Contactez-nous pour organiser une dégustation ou commander nos millésimes disponibles. 
-      Nous serons ravis de vous faire découvrir notre passion !</p>
+      Nous serons ravis de vous faire découvrir notre passion et notre savoir-faire familial !</p>
       <a href="contact.html" class="cta-button">Nous contacter</a>
     </div>
   </main>
@@ -621,7 +719,7 @@
 
       <div class="footer-right" id="footer-address">
         <!-- Adresse chargée dynamiquement depuis config.js -->
-        <span style="color: #999;">Chargement de l'adresse...</span>
+        <span style="color: #999;">Chargement...</span>
       </div>
     </div>
 
