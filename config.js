@@ -19,7 +19,7 @@ const CONFIG = {
     
     // REMPLACEZ avec votre vrai compte Instagram
     // Exemple : "https://instagram.com/domaine_morchoisne"
-    instagram: "https://instagram.com/votre_compte_reel",
+    instagram: "https://www.instagram.com/domaine_familial_morchoisne",
     
     // Autres réseaux sociaux (optionnel)
     facebook: "",
@@ -119,4 +119,5 @@ if (typeof module !== 'undefined' && module.exports) {
 if (typeof window !== 'undefined') {
   window.CONFIG = CONFIG;
 }
+
 
