@@ -561,6 +561,35 @@
         padding: 20px;
       }
     }
+        /* ===== Prix bouteille ===== */
+    .bottle-price {
+      margin-top: 20px;
+      padding: 18px 20px;
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(58,47,31,0.06);
+    }
+
+    .bottle-price .price-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      font-size: 1.05em;
+    }
+
+    .bottle-price .price-line:first-child {
+      border-bottom: 1px dotted var(--color-border);
+      padding-bottom: 12px;
+      margin-bottom: 4px;
+    }
+
+    .bottle-price .price-amount {
+      font-weight: bold;
+      color: var(--color-primary);
+      font-size: 1.15em;
+    }
   </style>
 </head>
 <body>
@@ -609,6 +638,16 @@
           <p class="notes">
             Notre cuvée signature en agriculture biologique.
           </p>
+          <div class="bottle-price">
+            <div class="price-line">
+              <span>🍾 L'unité : </span>
+              <span class="price-amount">17 € la bouteille</span>
+            </div>
+            <div class="price-line">
+              <span>📦 Carton de 6 : </span>
+              <span class="price-amount">15 € la bouteille</span>
+            </div>
+          </div>
         </div>
       </div>
 
