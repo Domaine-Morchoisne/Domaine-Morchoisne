@@ -4,24 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Titre et description (SEO) -->
-  <title>Domaine MORCHOISNE - Vignoble familial bio en Île-de-France</title>
-  <meta name="description" content="Le Domaine MORCHOISNE, vignoble familial biologique à Bonvilliers près d'Étampes, cultive les cépages Floréal et Voltis. Le pari fou d'un père et d'un fils pour redonner vie à un vignoble oublié.">
-  <meta name="keywords" content="Domaine Morchoisne,vin bio Essonne,domaine viticole Île-de-France,vin bio,Voltis,Floréal,vin biologique,Morigny-Champigny,vigneron bio,vin blanc bio,viticulture durable,père et fils,Bonvilliers,Essonne">
+  <!-- Titre et description SEO -->
+  <title>Domaine Morchoisne - Vin blanc bio près d'Étampes en Essonne</title>
+  <meta name="description" content="Domaine Morchoisne est un vignoble familial bio situé à Bonvilliers, près d'Étampes dans l'Essonne. Nous produisons un vin blanc bio local issu des cépages résistants Floréal et Voltis. Vente directe, visites du vignoble et dégustations sur rendez-vous.">
+  <meta name="keywords" content="Domaine Morchoisne, vin blanc bio Essonne, vin bio Essonne, vin local Essonne, vignoble familial bio, domaine viticole Essonne, vignoble près d'Étampes, vin bio près d'Étampes, producteur de vin local, vente directe vin bio, dégustation vin Essonne, visite vignoble Essonne, Bonvilliers, Morigny-Champigny, Étampes, Sud Essonne, Île-de-France, Floréal, Voltis, cépages résistants, père et fils">
   <meta name="author" content="Pierre-Louis Morchoisne">
 
-  <!-- Localisation (chargée dynamiquement) -->
+  <!-- Localisation -->
   <meta name="geo.region" content="FR-91">
   <meta name="geo.placename" content="Morigny-Champigny">
-  
-  <!-- Open Graph (réseaux sociaux) -->
-  <meta property="og:title" content="Domaine MORCHOISNE - Vignoble familial bio en Île-de-France">
-  <meta property="og:description" content="Le Domaine MORCHOISNE, vignoble familial biologique à Bonvilliers près d'Étampes.">
+  <meta name="geo.position" content="48.45;2.18">
+  <meta name="ICBM" content="48.45, 2.18">
+
+  <!-- Open Graph réseaux sociaux -->
+  <meta property="og:title" content="Domaine Morchoisne - Vin blanc bio près d'Étampes en Essonne">
+  <meta property="og:description" content="Vignoble familial bio situé à Bonvilliers, près d'Étampes dans l'Essonne. Vin blanc bio local issu des cépages Floréal et Voltis. Vente directe, visites et dégustations sur rendez-vous.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:image" content="">
-  <meta property="og:url" content="">
-  
+  <meta property="og:image" content="https://domaine-morchoisne.github.io/Domaine-Morchoisne/bouteille%202024.png">
+  <meta property="og:url" content="https://domaine-morchoisne.github.io/Domaine-Morchoisne/">
+
+  <!-- Canonical et indexation -->
+  <link rel="canonical" href="https://domaine-morchoisne.github.io/Domaine-Morchoisne/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Données structurées pour Google et les moteurs IA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Winery",
+    "name": "Domaine Morchoisne",
+    "description": "Vignoble familial biologique situé à Bonvilliers, près d'Étampes dans l'Essonne. Production de vin blanc bio local issu des cépages résistants Floréal et Voltis.",
+    "url": "https://domaine-morchoisne.github.io/Domaine-Morchoisne/",
+    "email": "domaine.morchoisne@gmail.com",
+    "image": "https://domaine-morchoisne.github.io/Domaine-Morchoisne/bouteille%202024.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "17 rue du 19 mars 1962, Bonvilliers",
+      "addressLocality": "Morigny-Champigny",
+      "postalCode": "91150",
+      "addressCountry": "FR"
+    },
+    "areaServed": [
+      "Bonvilliers",
+      "Morigny-Champigny",
+      "Étampes",
+      "Essonne",
+      "Île-de-France",
+      "Paris"
+    ],
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Pierre-Louis Morchoisne"
+      },
+      {
+        "@type": "Person",
+        "name": "Philippe Morchoisne"
+      }
+    ],
+    "sameAs": [
+      "https://maps.app.goo.gl/EXttxMw3xGGTvr1B6"
+    ]
+  }
+  </script>
+
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -30,11 +77,7 @@
   <link rel="mask-icon" href="safari-pinned-tab.svg" color="#7A9E7E">
   <meta name="msapplication-TileColor" content="#7A9E7E">
   <meta name="theme-color" content="#7A9E7E">
-  
-  <!-- Canonical et indexation -->
-  <link rel="canonical" href="">
-  <meta name="robots" content="index, follow">
-  
+
   <style>
     /* ===== Reset et variables ===== */
     * {
@@ -57,7 +100,7 @@
       line-height: 1.6;
     }
 
-    /* ===== En-tête (header) ===== */
+    /* ===== En-tête ===== */
     header {
       display: flex;
       justify-content: space-between;
@@ -111,7 +154,7 @@
       background-color: var(--color-primary);
     }
 
-    /* ===== Menu mobile (hamburger) ===== */
+    /* ===== Menu mobile ===== */
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -159,10 +202,21 @@
       animation: fadeInUp 0.8s ease-out 0.2s backwards;
     }
 
-    .cta-button {
-      display: inline-block;
+    .hero-text .seo-text {
+      font-size: 1.05em;
+    }
+
+    .buttons-zone {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
       margin-top: 30px;
       margin-left: 1cm;
+      animation: fadeInUp 0.8s ease-out 0.4s backwards;
+    }
+
+    .cta-button {
+      display: inline-block;
       padding: 15px 35px;
       background-color: var(--color-primary);
       color: white;
@@ -170,7 +224,6 @@
       border-radius: 5px;
       font-size: 1.1em;
       transition: all 0.3s;
-      animation: fadeInUp 0.8s ease-out 0.4s backwards;
       box-shadow: 0 4px 15px rgba(122, 158, 126, 0.3);
     }
 
@@ -178,6 +231,18 @@
       background-color: var(--color-primary-hover);
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(122, 158, 126, 0.4);
+    }
+
+    .cta-button.secondary {
+      background-color: transparent;
+      color: var(--color-primary);
+      border: 2px solid var(--color-primary);
+      box-shadow: none;
+    }
+
+    .cta-button.secondary:hover {
+      background-color: var(--color-primary);
+      color: white;
     }
 
     .hero-image {
@@ -214,7 +279,7 @@
       }
     }
 
-    /* ===== Pied de page (footer) ===== */
+    /* ===== Pied de page ===== */
     footer {
       font-size: 0.95em;
       color: var(--color-text);
@@ -282,7 +347,6 @@
       margin: 0 10px;
     }
 
-    /* Protection anti-spam pour email */
     .email-protected {
       cursor: pointer;
     }
@@ -303,8 +367,8 @@
       .hero-text p {
         padding-left: 0;
       }
-      
-      .cta-button {
+
+      .buttons-zone {
         margin-left: 0;
       }
 
@@ -346,6 +410,16 @@
         font-size: 1em;
       }
 
+      .buttons-zone {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cta-button {
+        width: 100%;
+        text-align: center;
+      }
+
       .footer-content {
         flex-direction: column;
         text-align: center;
@@ -371,7 +445,7 @@
   <header>
     <a href="index.html" class="logo" id="site-name">Domaine MORCHOISNE</a>
     
-    <!-- Menu hamburger (mobile) -->
+    <!-- Menu hamburger mobile -->
     <div class="menu-toggle" onclick="toggleMenu()">
       <span></span>
       <span></span>
@@ -397,18 +471,24 @@
   <section class="hero">
     <div class="hero-text">
       <h1>Domaine Familial<br>MORCHOISNE</h1>
+
       <p>
         Le pari fou d'un père et de son fils : redonner vie à un vignoble oublié.<br>
         Une aventure familiale où chaque bouteille raconte une histoire de passion et de nature.
       </p>
-      <a href="nos-vins.html" class="cta-button">Découvrir nos vins</a>
+
+      <p class="seo-text">
+        Situé à Bonvilliers, près d'Étampes dans l'Essonne, le Domaine Morchoisne est un vignoble familial biologique en Île-de-France. Nous produisons un vin blanc bio local issu des cépages résistants Floréal et Voltis. Le domaine propose la vente directe de bouteilles et cartons, ainsi que des visites du vignoble et des dégustations sur rendez-vous.
+      </p>
+
+      <div class="buttons-zone">
+        <a href="nos-vins.html" class="cta-button">Découvrir nos vins</a>
+        <a href="contact.html" class="cta-button secondary">Commander ou réserver une dégustation</a>
+      </div>
     </div>
 
     <div class="hero-image">
-      <img
-        src="20250922_1808_Dessins Contrastés Simples_remix_01k5s2s7vfebe9dewz07x2nn8t.jpg"
-        alt="Illustration stylisée du Domaine Morchoisne"
-        onerror="this.style.display='none'">
+      20250922_1808_Dessins Contrastés Simples_remix_01k5s2s7vfebe9dewz07x2nn8t.jpg
     </div>
   </section>
 
@@ -417,16 +497,22 @@
     <div class="footer-content">
       <div class="footer-left">
         <!-- Instagram -->
-        <a href="#" id="instagram-link" target="_blank" rel="noopener noreferrer">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="social-icon">
+        #
+          https://cdn-icons-png.flaticon.com/512/2111/2111463.png
           <span>Suivez-nous sur Instagram</span>
         </a>
         <br><br>
         
-        <!-- Email (protection anti-spam) -->
-        <a href="#" id="email-link" title="Nous contacter par email">
-          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" class="social-icon">
+        <!-- Email -->
+        #
+          https://cdn-icons-png.flaticon.com/512/561/561127.png
           <span class="email-protected" id="email-display">Nous contacter</span>
+        </a>
+        <br><br>
+
+        <!-- Google Maps -->
+        <a href="https://maps.app.goo.gl/EXttxMw3xGGTvr1B6" target="_blank" rel="noopener noreferrer" title="Voir le Domaine Morchoisne sur Google Maps">
+          <span>Voir le Domaine Morchoisne sur Google Maps</span>
         </a>
       </div>
 
@@ -469,35 +555,33 @@
     document.addEventListener('DOMContentLoaded', function() {
       // Vérifier si CONFIG est chargé
       if (typeof CONFIG === 'undefined') {
-        console.error('❌ Le fichier config.js n\'a pas pu être chargé !');
+        console.error('Le fichier config.js n’a pas pu être chargé.');
         document.getElementById('loading').style.display = 'block';
         document.getElementById('loading').textContent = 
-          '⚠️ Erreur : Impossible de charger la configuration. Vérifiez que config.js existe.';
+          'Erreur : impossible de charger la configuration. Vérifiez que config.js existe.';
         return;
       }
 
-      console.log('✅ Configuration chargée avec succès');
+      console.log('Configuration chargée avec succès');
 
       // ==========================================
-      // Charger l'email (avec protection anti-spam)
+      // Charger l'email avec protection anti-spam
       // ==========================================
       const emailLink = document.getElementById('email-link');
       const emailDisplay = document.getElementById('email-display');
       
       if (emailLink && CONFIG.contact && CONFIG.contact.email) {
-        // Créer le lien mailto (invisible pour les robots)
         emailLink.href = 'mailto:' + CONFIG.contact.email;
         
-        // Afficher une version obfusquée
         if (CONFIG.contact.emailDisplay) {
           emailDisplay.textContent = CONFIG.contact.emailDisplay;
         } else {
-          // Si pas de version obfusquée, créer une protection basique
-          const [user, domain] = CONFIG.contact.email.split('@');
+          const parts = CONFIG.contact.email.split('@');
+          const user = parts[0];
+          const domain = parts[1];
           emailDisplay.textContent = user + ' [at] ' + domain;
         }
 
-        // Au clic, révéler le vrai email
         emailLink.addEventListener('click', function(e) {
           if (emailDisplay.textContent.includes('[at]')) {
             e.preventDefault();
@@ -530,19 +614,19 @@
       }
 
       // ==========================================
-      // Mettre à jour les métadonnées Open Graph dynamiquement
+      // Mettre à jour les métadonnées Open Graph
       // ==========================================
       if (CONFIG.seo) {
         // Canonical URL
         const canonicalLink = document.querySelector('link[rel="canonical"]');
         if (canonicalLink && CONFIG.seo.siteUrl) {
-          canonicalLink.href = CONFIG.seo.siteUrl + 'nos-vins.html';
+          canonicalLink.href = CONFIG.seo.siteUrl;
         }
 
         // Open Graph URL
         const ogUrl = document.querySelector('meta[property="og:url"]');
         if (ogUrl && CONFIG.seo.siteUrl) {
-          ogUrl.content = CONFIG.seo.siteUrl + 'nos-vins.html';
+          ogUrl.content = CONFIG.seo.siteUrl;
         }
 
         // Open Graph Image
