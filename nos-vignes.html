@@ -5,22 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Titre et SEO -->
-  <title>Domaine MORCHOISNE - Nos Vignes</title>
-  <meta name="description" content="Découvrez les vignes du Domaine Morchoisne : un vignoble familial en Essonne cultivé en bio, avec les cépages Floréal et Voltis résistants aux maladies.">
-  <meta name="keywords" content="Domaine Morchoisne,vin bio Essonne,domaine viticole Île-de-France,vin bio,Voltis,Floréal,vin biologique,Morigny-Champigny,vigneron bio,vin blanc bio,viticulture durable,père et fils,Bonvilliers,Essonne">
+  <title>Nos vignes à Bonvilliers près d'Étampes | Domaine Morchoisne</title>
+  <meta name="description" content="Découvrez les vignes du Domaine Morchoisne, vignoble familial bio situé à Bonvilliers près d'Étampes dans le Sud Essonne. Cépages résistants Floréal et Voltis, terroir argilo-calcaire, viticulture biologique et biodiversité.">
+  <meta name="keywords" content="Domaine Morchoisne, vignes Bonvilliers, vignoble près d'Étampes, vignoble Sud Essonne, vin bio Essonne, vin blanc bio Essonne, domaine viticole Essonne, vignoble familial bio, Floréal, Voltis, cépages résistants, viticulture biologique, terroir argilo-calcaire, Morigny-Champigny, Bonvilliers, Étampes, Île-de-France">
   <meta name="author" content="Pierre-Louis Morchoisne">
 
   <!-- Localisation -->
   <meta name="geo.region" content="FR-91">
   <meta name="geo.placename" content="Morigny-Champigny">
+  <meta name="geo.position" content="48.45;2.18">
+  <meta name="ICBM" content="48.45, 2.18">
   
-  <!-- Open Graph (réseaux sociaux) -->
-  <meta property="og:title" content="Domaine MORCHOISNE - Nos Vignes">
-  <meta property="og:description" content="Découvrez les vignes du Domaine Morchoisne : un vignoble familial en Essonne cultivé en bio, avec les cépages Floréal et Voltis résistants aux maladies.">
+  <!-- Open Graph réseaux sociaux -->
+  <meta property="og:title" content="Nos vignes à Bonvilliers près d'Étampes | Domaine Morchoisne">
+  <meta property="og:description" content="Découvrez le vignoble familial bio du Domaine Morchoisne à Bonvilliers, près d'Étampes dans le Sud Essonne. Floréal, Voltis, terroir argilo-calcaire et viticulture biologique.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:image" content="">
-  <meta property="og:url" content="">
+  <meta property="og:image" content="https://domaine-morchoisne.github.io/Domaine-Morchoisne/images/vue-drone.jpg">
+  <meta property="og:url" content="https://domaine-morchoisne.github.io/Domaine-Morchoisne/nos-vignes.html">
+  
+  <!-- Canonical et indexation -->
+  <link rel="canonical" href="https://domaine-morchoisne.github.io/Domaine-Morchoisne/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Données structurées pour Google et les moteurs IA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Winery",
+    "name": "Domaine Morchoisne",
+    "description": "Vignoble familial biologique situé à Bonvilliers, près d'Étampes dans le Sud Essonne. Le domaine cultive les cépages résistants Floréal et Voltis sur un terroir argilo-calcaire.",
+    "url": "https://domaine-morchoisne.github.io/Domaine-Morchoisne/nos-vignes.html",
+    "image": "https://domaine-morchoisne.github.io/Domaine-Morchoisne/images/vue-drone.jpg",
+    "email": "domaine.morchoisne@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "17 rue du 19 mars 1962, Bonvilliers",
+      "addressLocality": "Morigny-Champigny",
+      "postalCode": "91150",
+      "addressCountry": "FR"
+    },
+    "areaServed": [
+      "Bonvilliers",
+      "Morigny-Champigny",
+      "Étampes",
+      "Sud Essonne",
+      "Essonne",
+      "Île-de-France"
+    ],
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Pierre-Louis Morchoisne"
+      },
+      {
+        "@type": "Person",
+        "name": "Philippe Morchoisne"
+      }
+    ],
+    "sameAs": [
+      "https://maps.app.goo.gl/EXttxMw3xGGTvr1B6"
+    ]
+  }
+  </script>
   
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -31,12 +78,7 @@
   <meta name="msapplication-TileColor" content="#7A9E7E">
   <meta name="theme-color" content="#7A9E7E">
   
-  <!-- Canonical et indexation -->
-  <link rel="canonical" href="">
-  <meta name="robots" content="index, follow">
-  
   <style>
-    /* ===== Variables CSS ===== */
     :root {
       --color-bg: #F7F0E6;
       --color-text: #3A2F1F;
@@ -51,7 +93,6 @@
       box-sizing: border-box;
     }
 
-    /* ===== Styles globaux ===== */
     body {
       margin: 0;
       font-family: "Georgia", serif;
@@ -60,7 +101,6 @@
       line-height: 1.6;
     }
 
-    /* ===== Header ===== */
     header {
       display: flex;
       justify-content: space-between;
@@ -114,7 +154,6 @@
       background-color: var(--color-primary);
     }
 
-    /* ===== Menu mobile ===== */
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -129,14 +168,12 @@
       transition: all 0.3s;
     }
 
-    /* ===== Section principale ===== */
     .vineyard-section {
       padding: 50px 5%;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    /* En-tête */
     .vineyard-header {
       text-align: center;
       margin-bottom: 50px;
@@ -161,11 +198,10 @@
       font-size: 1.2em;
       line-height: 1.6;
       color: var(--color-text);
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
     }
 
-    /* Section terroir */
     .terroir-section {
       background: var(--color-white);
       border: 1px solid var(--color-border);
@@ -229,7 +265,6 @@
       margin-top: 5px;
     }
 
-    /* Photo drone */
     .drone-photo-container {
       background: var(--color-white);
       border: 1px solid var(--color-border);
@@ -266,7 +301,6 @@
       font-style: italic;
     }
  
-    /* Section cépages */
     .grape-varieties {
       margin: 60px 0;
     }
@@ -274,7 +308,15 @@
     .grape-varieties h2 {
       color: var(--color-primary);
       font-size: 2em;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .grape-intro {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      font-size: 1.08em;
+      line-height: 1.7;
       text-align: center;
     }
 
@@ -289,8 +331,13 @@
       animation: fadeInUp 0.8s ease-out backwards;
     }
 
-    .grape-card:nth-child(2) { animation-delay: 0.3s; }
-    .grape-card:nth-child(3) { animation-delay: 0.4s; }
+    .grape-card:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .grape-card:nth-child(4) {
+      animation-delay: 0.4s;
+    }
 
     .grape-card:hover {
       transform: translateY(-5px);
@@ -380,6 +427,7 @@
       border-bottom: 1px dotted var(--color-border);
       display: flex;
       justify-content: space-between;
+      gap: 15px;
     }
 
     .characteristics-list li:last-child {
@@ -393,9 +441,21 @@
 
     .char-value {
       color: var(--color-gray);
+      text-align: right;
     }
 
-    /* Section pratiques */
+    .blend-note {
+      margin-top: 30px;
+      padding: 28px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-left: 5px solid var(--color-primary);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(58,47,31,0.06);
+      font-size: 1.08em;
+      line-height: 1.8;
+    }
+
     .practices-section {
       background: var(--color-white);
       border: 1px solid var(--color-border);
@@ -446,7 +506,6 @@
       line-height: 1.5;
     }
 
-    /* Call to action */
     .vineyard-cta {
       text-align: center;
       margin-top: 60px;
@@ -457,7 +516,7 @@
       animation: fadeInUp 0.8s ease-out 0.6s backwards;
     }
 
-    .vineyard-cta h3 {
+    .vineyard-cta h2 {
       color: var(--color-primary);
       font-size: 1.5em;
       margin-bottom: 15px;
@@ -479,6 +538,7 @@
       font-size: 1.1em;
       transition: all 0.3s;
       box-shadow: 0 4px 15px rgba(122, 158, 126, 0.3);
+      margin: 5px;
     }
 
     .cta-button:hover {
@@ -487,7 +547,18 @@
       box-shadow: 0 6px 20px rgba(122, 158, 126, 0.4);
     }
 
-    /* ===== Animations ===== */
+    .cta-button.secondary {
+      background-color: transparent;
+      color: var(--color-primary);
+      border: 2px solid var(--color-primary);
+      box-shadow: none;
+    }
+
+    .cta-button.secondary:hover {
+      background-color: var(--color-primary);
+      color: white;
+    }
+
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -499,7 +570,6 @@
       }
     }
 
-    /* ===== Footer ===== */
     footer {
       font-size: 0.95em;
       color: var(--color-text);
@@ -567,11 +637,9 @@
       margin: 0 10px;
     }
 
-    /* ===== Responsive ===== */
     @media (max-width: 1024px) {
       .terroir-grid,
-      .grape-content,
-      .maps-container {
+      .grape-content {
         grid-template-columns: 1fr;
       }
 
@@ -635,6 +703,14 @@
         text-align: center;
       }
 
+      .characteristics-list li {
+        flex-direction: column;
+      }
+
+      .char-value {
+        text-align: left;
+      }
+
       .practices-grid {
         grid-template-columns: 1fr;
       }
@@ -670,7 +746,6 @@
   <header>
     <a href="index.html" class="logo">Domaine MORCHOISNE</a>
     
-    <!-- Menu hamburger (mobile) -->
     <div class="menu-toggle" onclick="toggleMenu()">
       <span></span>
       <span></span>
@@ -689,24 +764,30 @@
 
   <!-- ===== Section principale ===== -->
   <main class="vineyard-section">
-    <!-- En-tête -->
+    
     <div class="vineyard-header">
-      <h1>Nos Vignes</h1>
+      <h1>Nos vignes à Bonvilliers, près d'Étampes</h1>
       <div class="separator"></div>
-      <p>Un vignoble familial de 8 600 pieds implanté sur les terres d'Île-de-France, cultivé en agriculture biologique avec des cépages résistants parfaitement adaptés à notre terroir.</p>
+      <p>
+        À Bonvilliers, dans le Sud Essonne, le Domaine Morchoisne cultive un vignoble familial bio composé de 8 600 pieds de vigne. Plantées sur un terroir argilo-calcaire, nos vignes de Floréal et Voltis donnent naissance à un vin blanc bio local, frais et authentique.
+      </p>
     </div>
 
     <!-- Section terroir -->
     <section class="terroir-section">
-      <h2>Notre Terroir</h2>
+      <h2>Notre terroir</h2>
       <div class="terroir-grid">
         <div class="terroir-text">
           <p>
-            Notre vignoble est situé à Bonvilliers, à 5km d'Etampes, en plein cœur de l'Essonne, sur des sols argilo-calcaires typiques de la région. Cette composition offre un excellent drainage naturel et une bonne rétention d'eau, permettant à nos vignes de s'épanouir même lors des étés les plus secs.
+            Notre vignoble est situé à Bonvilliers, sur la commune de Morigny-Champigny, à proximité d'Étampes dans le Sud Essonne. Dans une région encore peu connue pour la viticulture, nous avons fait le choix de valoriser un terroir local d'Île-de-France avec une approche familiale, exigeante et respectueuse de la nature.
           </p>
           <p>
-            L’exposition sud de nos parcelles assure un ensoleillement optimal tout au long de la journée, favorisant une maturation progressive et harmonieuse des raisins. Le microclimat local, adouci par la présence d’un massif boisé, offre des conditions idéales pour la viticulture.
+            Les sols argilo-calcaires de nos parcelles offrent un bon équilibre entre drainage naturel et réserve en eau. Cette structure permet à la vigne de s'installer durablement et favorise une maturation progressive des raisins.
           </p>
+          <p>
+            L'exposition sud de nos parcelles assure un bel ensoleillement tout au long de la journée. Associée au microclimat local et à la présence d'un environnement boisé, elle contribue à l'équilibre, à la fraîcheur et à l'expression aromatique de nos vins blancs.
+          </p>
+
           <div class="terroir-stats">
             <div class="stat-item">
               <span class="stat-number">8600</span>
@@ -737,7 +818,11 @@
 
     <!-- Section cépages -->
     <section class="grape-varieties">
-      <h2>Nos Cépages Résistants</h2>
+      <h2>Nos cépages résistants</h2>
+
+      <p class="grape-intro">
+        Le Domaine Morchoisne cultive deux cépages blancs résistants : Floréal et Voltis. Ces cépages modernes, issus de la recherche française, ont été choisis pour leur bonne résistance naturelle aux principales maladies de la vigne, notamment le mildiou et l'oïdium. Ils s'inscrivent parfaitement dans notre démarche de viticulture biologique, en permettant de produire un vin blanc local tout en limitant les traitements au vignoble.
+      </p>
 
       <!-- Floréal -->
       <div class="grape-card">
@@ -751,15 +836,17 @@
             <span class="label">pieds plantés</span>
           </div>
         </div>
+
         <div class="grape-content">
           <div class="grape-description">
             <p>
-              Le Floréal est un cépage blanc hybride résistant créé par l'INRAE. Issu d'un croisement complexe, il combine résistance aux maladies et qualité aromatique exceptionnelle. Ce cépage précoce s'adapte parfaitement à notre climat d'Île-de-France.
+              Le Floréal est le cépage le plus présent dans notre vignoble. Il a été choisi pour son adaptation à notre terroir du Sud Essonne, sa bonne résistance naturelle aux principales maladies de la vigne et sa capacité à donner des vins blancs frais, expressifs et aromatiques.
             </p>
             <p>
-              Ses arômes subtils de fleurs blanches, d'agrumes et de fruits exotiques en font un cépage de choix pour produire des vins blancs élégants et rafraîchissants. Sa résistance naturelle au mildiou et à l'oïdium nous permet de réduire drastiquement les traitements.
+              Dans notre cuvée, le Floréal apporte de la vivacité, de l'élégance et un bel éclat aromatique. Il participe aux notes fraîches et exotiques que nous aimons retrouver dans notre vin, avec une sensation délicate et lumineuse en bouche.
             </p>
           </div>
+
           <div class="grape-characteristics">
             <h4>Caractéristiques</h4>
             <ul class="characteristics-list">
@@ -768,24 +855,20 @@
                 <span class="char-value">Blanc</span>
               </li>
               <li>
-                <span class="char-label">Précocité</span>
-                <span class="char-value">Précoce</span>
-              </li>
-              <li>
                 <span class="char-label">Résistance</span>
-                <span class="char-value">Mildiou & Oïdium</span>
+                <span class="char-value">Mildiou &amp; oïdium</span>
               </li>
               <li>
-                <span class="char-label">Arômes</span>
-                <span class="char-value">Fleurs, Agrumes</span>
+                <span class="char-label">Profil</span>
+                <span class="char-value">Frais et expressif</span>
               </li>
               <li>
-                <span class="char-label">Acidité</span>
-                <span class="char-value">Équilibrée</span>
+                <span class="char-label">Expression aromatique</span>
+                <span class="char-value">Fruit de la passion, agrumes et fraîcheur</span>
               </li>
               <li>
-                <span class="char-label">Potentiel alcool</span>
-                <span class="char-value">12-13%</span>
+                <span class="char-label">Rôle dans la cuvée</span>
+                <span class="char-value">Vivacité, élégance et éclat</span>
               </li>
             </ul>
           </div>
@@ -804,15 +887,17 @@
             <span class="label">pieds plantés</span>
           </div>
         </div>
+
         <div class="grape-content">
           <div class="grape-description">
             <p>
-              Le Voltis est également un cépage blanc hybride résistant développé par l'INRAE. Particulièrement robuste, il affiche une résistance remarquable aux principales maladies cryptogamiques de la vigne, ce qui correspond parfaitement à notre philosophie de viticulture biologique.
+              Le Voltis complète le Floréal dans notre vignoble. Il a été choisi pour sa bonne résistance naturelle, son comportement régulier dans nos parcelles et son intérêt dans l'élaboration de vins blancs équilibrés et harmonieux.
             </p>
             <p>
-              Il donne naissance à des vins aux arômes subtils, à la fois fruités et floraux, offrant une belle fraîcheur et une structure harmonieuse. Sa régularité de production et sa grande polyvalence en font un cépage fiable, prisé pour l’élaboration de vins blancs de caractère.
+              Au Domaine Morchoisne, le Voltis apporte de la rondeur, de la souplesse et de l'équilibre à notre cuvée. Il complète la fraîcheur du Floréal avec une expression plus douce, marquée par des notes florales et une belle harmonie en bouche.
             </p>
           </div>
+
           <div class="grape-characteristics">
             <h4>Caractéristiques</h4>
             <ul class="characteristics-list">
@@ -821,73 +906,83 @@
                 <span class="char-value">Blanc</span>
               </li>
               <li>
-                <span class="char-label">Précocité</span>
-                <span class="char-value">Demi-précoce</span>
-              </li>
-              <li>
                 <span class="char-label">Résistance</span>
-                <span class="char-value">Très élevée</span>
+                <span class="char-value">Mildiou &amp; oïdium</span>
               </li>
               <li>
-                <span class="char-label">Arômes</span>
-                <span class="char-value">Fruités et Floraux</span>
+                <span class="char-label">Profil</span>
+                <span class="char-value">Souple et équilibré</span>
               </li>
               <li>
-                <span class="char-label">Acidité</span>
-                <span class="char-value">Légèrement acide</span>
+                <span class="char-label">Expression aromatique</span>
+                <span class="char-value">Fleurs blanches, poire et rondeur</span>
               </li>
               <li>
-                <span class="char-label">Potentiel alcool</span>
-                <span class="char-value">11-12,5%</span>
+                <span class="char-label">Rôle dans la cuvée</span>
+                <span class="char-value">Harmonie, douceur et structure</span>
               </li>
             </ul>
           </div>
         </div>
       </div>
+
+      <div class="blend-note">
+        <p>
+          Ensemble, Floréal et Voltis donnent naissance à un vin blanc bio local frais, aromatique et équilibré. Selon les millésimes, notre cuvée révèle des notes de fruits exotiques, comme le fruit de la passion, des touches de fleurs blanches, une belle fraîcheur et une bouche agréable à partager.
+        </p>
+      </div>
     </section>
 
     <!-- Section pratiques viticoles -->
     <section class="practices-section">
-      <h2>Nos Pratiques Viticoles</h2>
+      <h2>Nos pratiques viticoles</h2>
       <div class="practices-grid">
         <div class="practice-item">
           <div class="practice-icon">🌱</div>
-          <h3>Agriculture Biologique</h3>
-          <p>Certifiée depuis 2021, aucun produit chimique de synthèse</p>
+          <h3>Agriculture biologique</h3>
+          <p>Vignoble certifié Agriculture Biologique depuis 2021, avec une attention particulière portée au sol et à la biodiversité.</p>
         </div>
+
         <div class="practice-item">
           <div class="practice-icon">✂️</div>
-          <h3>Taille Manuelle</h3>
-          <p>Taille raisonnée en hiver pour équilibrer vigueur et production</p>
+          <h3>Taille manuelle</h3>
+          <p>Taille raisonnée en hiver pour accompagner l'équilibre naturel de la vigne et préparer la future récolte.</p>
         </div>
+
         <div class="practice-item">
           <div class="practice-icon">🌿</div>
-          <h3>Enherbement Naturel</h3>
-          <p>Couverture végétale pour enrichir et protéger les sols</p>
+          <h3>Enherbement naturel</h3>
+          <p>Couverture végétale des sols pour limiter l'érosion, préserver la vie du sol et favoriser l'équilibre du vignoble.</p>
         </div>
+
         <div class="practice-item">
           <div class="practice-icon">🐝</div>
           <h3>Biodiversité</h3>
-          <p>Haies, bosquet et zones refuges pour la faune auxiliaire</p>
+          <p>Préservation des haies, du bosquet et des zones refuges pour favoriser la faune auxiliaire autour des vignes.</p>
         </div>
+
         <div class="practice-item">
           <div class="practice-icon">💧</div>
-          <h3>Gestion de l'Eau</h3>
-          <p>Travail du sol pour optimiser la rétention hydrique naturelle</p>
+          <h3>Gestion de l'eau</h3>
+          <p>Travail du sol et observation des parcelles pour favoriser une bonne rétention hydrique naturelle.</p>
         </div>
+
         <div class="practice-item">
           <div class="practice-icon">🍂</div>
-          <h3>Effeuillage Raisonné</h3>
-          <p>Aération des grappes pour favoriser une maturation optimale</p>
+          <h3>Effeuillage raisonné</h3>
+          <p>Aération progressive des grappes afin de favoriser une maturation saine et régulière.</p>
         </div>
       </div>
     </section>
 
     <!-- Call to action -->
     <div class="vineyard-cta">
-      <h3>Venez découvrir nos vignes</h3>
-      <p>Rien ne vaut une visite sur place pour comprendre notre travail quotidien et notre attachement à ce terroir unique.</p>
+      <h2>Venez découvrir nos vignes</h2>
+      <p>
+        Vous souhaitez comprendre notre travail, découvrir notre vignoble familial bio ou déguster notre vin blanc local ? Les visites du vignoble et les dégustations sont possibles sur rendez-vous.
+      </p>
       <a href="contact.html" class="cta-button">Organiser une visite</a>
+      <a href="https://maps.app.goo.gl/EXttxMw3xGGTvr1B6" target="_blank" rel="noopener noreferrer" class="cta-button secondary">Voir sur Google Maps</a>
     </div>
   </main>
 
@@ -907,10 +1002,15 @@
           <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" class="social-icon">
           <span class="email-protected" id="email-display">Nous contacter</span>
         </a>
+        <br><br>
+
+        <!-- Google Maps -->
+        <a href="https://maps.app.goo.gl/EXttxMw3xGGTvr1B6" target="_blank" rel="noopener noreferrer" title="Voir le Domaine Morchoisne sur Google Maps">
+          <span>Voir le Domaine Morchoisne sur Google Maps</span>
+        </a>
       </div>
 
       <div class="footer-right" id="footer-address">
-        <!-- Adresse chargée dynamiquement depuis config.js -->
         <span style="color: #999;">Chargement...</span>
       </div>
     </div>
@@ -929,50 +1029,36 @@
   
   <!-- ===== Scripts ===== -->
   <script>
-    // ==========================================
-    // FONCTION : Menu mobile
-    // ==========================================
     function toggleMenu() {
       const nav = document.getElementById('main-nav');
       nav.classList.toggle('active');
     }
 
-    // ==========================================
-    // FONCTION : Année courante
-    // ==========================================
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    // ==========================================
-    // FONCTION : Charger les données depuis config.js
-    // ==========================================
     document.addEventListener('DOMContentLoaded', function() {
-      // Vérifier si CONFIG est chargé
       if (typeof CONFIG === 'undefined') {
-        console.error('❌ Le fichier config.js n\'a pas pu être chargé !');
+        console.error("Le fichier config.js n'a pas pu être chargé.");
         return;
       }
 
-      console.log('✅ Configuration chargée avec succès');
+      console.log("Configuration chargée avec succès.");
 
-      // ==========================================
-      // Charger l'email (avec protection anti-spam)
-      // ==========================================
       const emailLink = document.getElementById('email-link');
       const emailDisplay = document.getElementById('email-display');
       
       if (emailLink && CONFIG.contact && CONFIG.contact.email) {
-        // Créer le lien mailto
         emailLink.href = 'mailto:' + CONFIG.contact.email;
         
-        // Afficher une version obfusquée
         if (CONFIG.contact.emailDisplay) {
           emailDisplay.textContent = CONFIG.contact.emailDisplay;
         } else {
-          const [user, domain] = CONFIG.contact.email.split('@');
+          const parts = CONFIG.contact.email.split('@');
+          const user = parts[0];
+          const domain = parts[1];
           emailDisplay.textContent = user + ' [at] ' + domain;
         }
 
-        // Au clic, révéler le vrai email
         emailLink.addEventListener('click', function(e) {
           if (emailDisplay.textContent.includes('[at]')) {
             e.preventDefault();
@@ -983,17 +1069,11 @@
         });
       }
 
-      // ==========================================
-      // Charger le lien Instagram
-      // ==========================================
       const instagramLink = document.getElementById('instagram-link');
       if (instagramLink && CONFIG.contact && CONFIG.contact.instagram) {
         instagramLink.href = CONFIG.contact.instagram;
       }
 
-      // ==========================================
-      // Charger l'adresse
-      // ==========================================
       const footerAddress = document.getElementById('footer-address');
       if (footerAddress && CONFIG.address && CONFIG.owners) {
         footerAddress.innerHTML = `
@@ -1004,43 +1084,39 @@
         `;
       }
 
-      // ==========================================
-      // Mettre à jour les métadonnées Open Graph dynamiquement
-      // ==========================================
       if (CONFIG.seo) {
-        // Canonical URL
         const canonicalLink = document.querySelector('link[rel="canonical"]');
         if (canonicalLink && CONFIG.seo.siteUrl) {
           canonicalLink.href = CONFIG.seo.siteUrl + 'nos-vignes.html';
         }
 
-        // Open Graph URL
         const ogUrl = document.querySelector('meta[property="og:url"]');
         if (ogUrl && CONFIG.seo.siteUrl) {
           ogUrl.content = CONFIG.seo.siteUrl + 'nos-vignes.html';
         }
 
-        // Open Graph Image
         const ogImage = document.querySelector('meta[property="og:image"]');
         if (ogImage && CONFIG.seo.defaultImage) {
           ogImage.content = CONFIG.seo.defaultImage;
         }
 
-        // Coordonnées GPS (meta tags)
         if (CONFIG.address && CONFIG.address.coordinates) {
           const geoPosition = document.querySelector('meta[name="geo.position"]');
           const icbm = document.querySelector('meta[name="ICBM"]');
-          const coords = `${CONFIG.address.coordinates.lat}, ${CONFIG.address.coordinates.lng}`;
+          const coords = CONFIG.address.coordinates.lat + ';' + CONFIG.address.coordinates.lng;
+          const coordsIcbm = CONFIG.address.coordinates.lat + ', ' + CONFIG.address.coordinates.lng;
           
-          if (geoPosition) geoPosition.content = coords;
-          if (icbm) icbm.content = coords;
+          if (geoPosition) {
+            geoPosition.content = coords;
+          }
+
+          if (icbm) {
+            icbm.content = coordsIcbm;
+          }
         }
       }
     });
 
-    // ==========================================
-    // Fermer le menu mobile en cliquant en dehors
-    // ==========================================
     document.addEventListener('click', function(event) {
       const nav = document.getElementById('main-nav');
       const menuToggle = document.querySelector('.menu-toggle');
